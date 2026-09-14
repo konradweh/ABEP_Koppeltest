@@ -1,0 +1,468 @@
+% !TeX program = pdflatex
+% Kompilieren mit: pdflatex slides.tex (zweimal, wegen Inhaltsverzeichnis/Referenzen)
+%
+% Bewusst auf pdflatex ausgelegt (kein lualatex/fontspec noetig), damit die
+% Datei ohne zusaetzliche Font-Installation auf jedem TeX-Live/MiKTeX-Setup
+% kompiliert. Metropolis faellt dann auf Latin Modern Sans zurueck - das
+% passt zum gewuenschten reduzierten, minimalistischen Look ohnehin besser
+% als eine exotische Schriftart.
+\documentclass[10pt,aspectratio=169]{beamer}
+
+% ── Theme ──────────────────────────────────────────────────────────────────
+\usetheme{metropolis}
+
+% ── Pakete ─────────────────────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% lmodern: ohne dieses Paket faellt pdflatex mit T1-Kodierung auf die alten
+% gerasterten Computer-Modern-EC-Fonts zurueck (unscharf, sehr langsame
+% erste Kompilierung durch METAFONT, Aufzaehlungspunkte kaum sichtbar).
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,fit,backgrounds,calc,shapes.geometric}
+\usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{siunitx}
+\sisetup{locale = DE, per-mode=symbol}
+\usepackage{textcomp}
+% Beamers Standard-Listenabstaende (topsep/itemsep) sind recht grosszuegig --
+% bei mehreren Listen pro Folie fuehrt das schnell zum Ueberlaufen der Folie.
+% enumitem wuerde hier helfen, entfernt aber beamers Aufzaehlungssymbole
+% (eigene itemize-Definition ueberschreibt die Template-Anbindung). Daher
+% stattdessen beamers itemize/enumerate unveraendert lassen und nur die
+% Standard-Listenabstaende global straffen.
+\makeatletter
+\let\jlu@olditemize\itemize
+\let\jlu@oldenditemize\enditemize
+\renewenvironment{itemize}
+  {\jlu@olditemize\setlength{\itemsep}{1pt}\setlength{\parsep}{0pt}\setlength{\topsep}{2pt}}
+  {\jlu@oldenditemize}
+\makeatother
+
+% ── Farben: bewusst auf zwei neutrale Toene reduziert (kein Regenbogen) ────
+% Ein Blauton (Primaerfarbe, an JLU-Blau angelehnt) + ein Grauton
+% (Sekundaerfarbe). Keine Farbverlaeufe, keine grossflaechigen Farbbalken.
+\definecolor{giessenblau}{RGB}{28,54,88}
+\definecolor{hellblau}{RGB}{230,234,240}
+\definecolor{grauton}{RGB}{95,102,110}
+\definecolor{hellgrau}{RGB}{236,236,237}
+
+\setbeamercolor{palette primary}{bg=giessenblau,fg=white}
+\setbeamercolor{frametitle}{bg=white,fg=giessenblau}
+\setbeamercolor{progress bar}{fg=giessenblau,bg=giessenblau!20}
+\setbeamercolor{alerted text}{fg=giessenblau}
+\setbeamercolor{example text}{fg=grauton}
+\setbeamertemplate{itemize item}{\color{giessenblau}\textbullet}
+\setbeamertemplate{itemize subitem}{\color{grauton}\textendash}
+% \block: blauer Titelbalken, helles Blau als Koerper (Hauptaussagen)
+\setbeamercolor{block title}{bg=giessenblau,fg=white}
+\setbeamercolor{block body}{bg=hellblau}
+% \alertblock: grauer Titelbalken, helles Grau (Einordnung/Kontext) -
+% bewusst kein zweiter Farbton, sondern Graustufe, um "bunt" zu vermeiden
+\setbeamercolor{block title alerted}{bg=grauton,fg=white}
+\setbeamercolor{block body alerted}{bg=hellgrau,fg=black}
+
+\metroset{sectionpage=none, numbering=fraction, progressbar=frametitle}
+\makeatletter
+\setlength{\metropolis@progressinheadfoot@linewidth}{2pt}
+\makeatother
+
+% Kleine Helfer -------------------------------------------------------------
+% Platzhalter fuer Inhalte, die erst nach Abschluss von Arbeitsschritten
+% ergaenzt werden koennen (Status, Messwerte, Bilder).
+\newcommand{\todo}[1]{\textcolor{giessenblau}{\bfseries [TODO: #1]}}
+% Gestrichelter Bildrahmen, damit die Datei ohne echte Screenshots
+% kompiliert. Aufruf: \bildplatzhalter{Breite in cm}{Hoehe in cm}{Text}
+\newcommand{\bildplatzhalter}[3]{%
+  \begin{tikzpicture}
+    \draw[grauton, dashed, thick, rounded corners=2pt] (0,0) rectangle (#1,#2);
+    \node[grauton, align=center, text width=#1 cm-0.8cm] at ({#1/2},{#2/2}) {\small #3};
+  \end{tikzpicture}%
+}
+% Status-Symbole fuer die Fortschritts-/Zeitplanfolie
+\newcommand{\statusoffen}{\textcolor{grauton}{$\circ$}~offen}
+\newcommand{\statuslaufend}{\textcolor{giessenblau}{$\ominus$}~in Arbeit}
+\newcommand{\statusfertig}{\textcolor{giessenblau}{$\bullet$}~erledigt}
+% Grauer Hinweistext im Fliesstext (muss vor erster Verwendung definiert sein)
+\newcommand{\hinweis}[1]{{\small\color{grauton} #1}}
+
+% ── Meta ───────────────────────────────────────────────────────────────────
+\newcommand{\vortragsdatum}{\todo{Datum des Vortrags eintragen}}
+\title{Koppeltest eines luftatmenden Ionentriebwerks}
+\subtitle{RIT-10 (O\textsubscript{2}) und HF-Neutralisator im Vakuumtank ``Obelix''}
+\author{Konrad Wehkamp}
+% \date bewusst leer: \vortragsdatum enthaelt Farbbefehle, die in der von
+% hyperref automatisch erzeugten PDF-Metadaten-Zeichenkette Probleme
+% verursachen koennten. Das sichtbare Datum steht direkt auf der Titelfolie.
+\date{}
+
+\begin{document}
+
+% ============================================================
+% Titelfolie: schlicht, weiss, ein Logo, duenne Linien statt Farbflaeche
+% ============================================================
+{
+\setbeamertemplate{footline}{}
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west, inner sep=0pt] at ([xshift=0.9cm,yshift=-0.6cm]current page.north west)
+      {\includegraphics[height=1.0cm]{img/JLU_Giessen-Logo.pdf}};
+    \node[anchor=north east, inner sep=0pt, text width=6cm, align=right, font=\scriptsize\color{grauton}]
+      at ([xshift=-0.9cm,yshift=-0.55cm]current page.north east)
+      {I.\ Physikalisches Institut\\AG Ionentriebwerke};
+    \draw[giessenblau, line width=0.8pt] ([yshift=-1.7cm]current page.north west) -- ([yshift=-1.7cm]current page.north east);
+    \draw[giessenblau, line width=0.8pt] ([yshift=1.6cm]current page.south west) -- ([yshift=1.6cm]current page.south east);
+  \end{tikzpicture}
+
+  \vspace{2.0cm}
+  \begin{center}
+    {\usebeamerfont{title}\LARGE\bfseries\color{giessenblau} Koppeltest eines luftatmenden Ionentriebwerks}\\[0.7em]
+    {\Large\color{grauton} RIT-10 (O\textsubscript{2}) und HF-Neutralisator im Vakuumtank ``Obelix''}\par
+    \vspace{0.9cm}
+    {\large\textbf{Konrad Wehkamp}}\\[0.3em]
+    {\small Masterstudiengang PTRA (Physics and Technology for Space Applications)}\par
+    \vspace{0.6cm}
+    {\small
+      \begin{tabular}{r l}
+        Betreuung: & Jana Zorn \textperiodcentered\ Dr.\ Kristof Holste \textperiodcentered\ Prof.\ Dr.\ Peter J.\ Klar \\
+        Rahmen: & Spezialisierungsprojekt / Vorbereitung Masterarbeit \\
+        Datum: & \vortragsdatum \\
+      \end{tabular}
+    }
+  \end{center}
+\end{frame}
+}
+
+% ============================================================
+\begin{frame}{Gliederung}
+  \tableofcontents
+\end{frame}
+
+\section{Motivation}
+
+% ============================================================
+\begin{frame}{Warum luftatmende elektrische Antriebe (ABEP)?}
+  \small
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \begin{itemize}
+        \item \textbf{VLEO} (\emph{Very Low Earth Orbit}, ca.\ 150--250\,km): bessere Erdbeobachtung, mehr Datendurchsatz, weniger Strahlenbelastung
+        \item Dort dominiert der \alert{Restatmosphaerenwiderstand} -- ohne Schubkompensation zerfaellt die Bahn in Tagen bis Wochen
+        \item Klassisch: mitgefuehrter Treibstoff (Xenon) $\Rightarrow$ begrenzte Missionsdauer
+        \item \textbf{ABEP-Idee}: Restatmosphaere (O$_2$, N$_2$) selbst als Treibstoff nutzen
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \centering
+      \begin{tikzpicture}[node distance=4mm, every node/.style={font=\scriptsize, align=center}]
+        \node[draw=giessenblau, thick, rounded corners, fill=hellblau, minimum width=2.8cm, minimum height=0.65cm] (in) {Lufteinlass};
+        \node[draw=giessenblau, thick, rounded corners, fill=hellblau, minimum width=2.8cm, minimum height=0.65cm, below=of in] (ion) {Ionisation (RIT)};
+        \node[draw=giessenblau, thick, rounded corners, fill=hellblau, minimum width=2.8cm, minimum height=0.65cm, below=of ion] (acc) {Beschleunigung};
+        \node[draw=giessenblau, thick, rounded corners, fill=hellblau, minimum width=2.8cm, minimum height=0.65cm, below=of acc] (neu) {Neutralisation};
+        \draw[-{Latex}, giessenblau, thick] (in) -- (ion);
+        \draw[-{Latex}, giessenblau, thick] (ion) -- (acc);
+        \draw[-{Latex}, giessenblau, thick] (acc) -- (neu);
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \vspace{0.3em}
+  \begin{alertblock}{Kernidee}
+    Treibstoff ist praktisch unbegrenzt vorhanden -- die Herausforderung liegt im Triebwerk, das mit reaktiven Gasen statt Xenon arbeiten muss
+  \end{alertblock}
+\end{frame}
+
+\section{Technologie am Institut}
+
+% ============================================================
+\begin{frame}{RIT-Technologie und Neutralisator an der JLU}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \textbf{Funktionsprinzip RIT}
+      \begin{itemize}
+        \item Hochfrequenz-induktive Plasmaerzeugung, \alert{elektrodenlos} in der Ionisationskammer
+        \item Gitteroptik extrahiert und beschleunigt den Ionenstrahl
+        \item Keine Kathode im Entladungsraum $\Rightarrow$ hohe Lebensdauer, unempfindlich gegenueber reaktiven Gasen
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{Neutralisator}
+      \begin{itemize}
+        \item Baugleiches HF-Prinzip, aber als \alert{Elektronenquelle} betrieben (Projekt \emph{ECHION})
+        \item Liefert Elektronen zur Ladungs- und Stromneutralisation des Ionenstrahls
+        \item Kopplung ueber eine \alert{Plasmabruecke} zwischen Neutralisator und Strahl
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vspace{0.8em}
+  \begin{block}{Einordnung}
+    Die AG Ionentriebwerke (Prof.\ Klar) entwickelt RIT-Technologie seit ueber 50 Jahren; ABEP und die dafuer noetige HF-Neutralisatorentwicklung (ECHION, DLR-gefoerdert) sind aktuelle Schwerpunkte \cite{holste2020}
+  \end{block}
+\end{frame}
+
+\section{Ausgangslage}
+
+% ============================================================
+\begin{frame}{Ausgangslage: Vorarbeiten von Zorn et al.\ (2025)}
+  \small
+  \begin{itemize}
+    \item RIT-10 und HF-Neutralisator wurden \textbf{getrennt} mit O$_2$, N$_2$ und Mischungen charakterisiert \cite{zorn2025}
+    \item Diagnostik: Langmuirsonden, optische Emissionsspektroskopie, Faraday-Cups, Retarding-Potential-Analyzer, Massenspektrometrie, Raman-Spektroskopie
+  \end{itemize}
+  \vspace{0.4em}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Elektronendichte: $10^{16}$--$10^{17}\,\mathrm{m}^{-3}$
+        \item Elektronentemperatur: 5--8\,eV
+        \item Strahldivergenz: $\approx$20$^\circ$ (N$_2$) bis 28$^\circ$ (O$_2$)
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Neutralisatorstrom bis $\approx$100\,mA bei 2\,MHz, 100\,W
+        \item Dissoziationsgrad O$_2$: 25--41\,\%
+        \item Betriebsfenster: 6--20\,sccm, 1{,}3--2{,}0\,MHz, 1400\,V Gitterspannung
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vspace{0.6em}
+  \begin{alertblock}{Erkenntnislücke}
+    Triebwerk und Neutralisator wurden bisher \textbf{einzeln} untersucht -- das \textbf{gekoppelte} Betriebsverhalten (Plasmabruecke, Winkelabhaengigkeit, Rueckwirkung auf Bauteile) ist noch offen
+  \end{alertblock}
+\end{frame}
+
+\section{Meine Aufgabe}
+
+% ============================================================
+\begin{frame}{Meine Aufgabe im Überblick}
+  \centering
+  \begin{tikzpicture}[
+      box/.style={draw=giessenblau, thick, rounded corners, fill=hellblau, text width=5.8cm, align=left, font=\footnotesize, inner sep=7pt},
+      lbl/.style={font=\bfseries\small, text=giessenblau}
+    ]
+    \node[box] (spez) {
+      {\bfseries\small Spezialisierungsprojekt}\\[0.15em]
+      \begin{itemize}
+        \item Mechanisches Design der Halterung (CAD)
+        \item Thermische Analyse der HF-Spule und umliegender Bauteile
+      \end{itemize}
+    };
+    \node[box, right=0.9cm of spez] (masta) {
+      {\bfseries\small Masterarbeit}\\[0.15em]
+      \begin{itemize}
+        \item Integration in den Vakuumtank ``Obelix''
+        \item Koppeltest RIT-10 (O$_2$) + Neutralisator
+        \item Charakterisierung der Kopplung (Plasmabruecke, Winkel, Catcher/Blende)
+      \end{itemize}
+    };
+    \draw[-{Latex}, grauton, thick] (spez) -- (masta) node[midway, above, font=\scriptsize] {Grundlage fuer};
+  \end{tikzpicture}
+  \vspace{0.4em}
+
+  \hinweis{\small Diese Präsentation deckt beide Teile ab -- der heutige Fokus liegt auf dem aktuellen Stand}
+\end{frame}
+
+\section{Versuchsaufbau}
+
+% ============================================================
+\begin{frame}{Versuchsaufbau: Halterung und Vakuumtank}
+  \small
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \textbf{Anforderungen an die Halterung}
+      \begin{itemize}
+        \item Elektrische Isolation gegenueber Tankmasse
+        \item \alert{Verstellbarkeit des Neutralisatorwinkels} zum Ionenstrahl
+        \item Sondenzugang fuer Langmuirsonde
+        \item Vakuumtauglich, thermisch stabil
+      \end{itemize}
+      \vspace{0.2em}
+      \textbf{Aktuelle Baugruppen (Auszug)}
+      \begin{itemize}
+        \footnotesize
+        \item \texttt{Grundplatte}, \texttt{Seitenteil}, \texttt{Tisch}
+        \item \texttt{Teflonplatte} -- elektr.\ Isolation (PTFE)
+        \item \texttt{RFN\_Drehscheibe} -- Winkelmechanismus
+        \item \texttt{GFK\_Unterlegring}, \texttt{Ring\_unten}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \centering
+      \bildplatzhalter{5.4}{5.0}{CAD-Ansicht / Rendering\\der Halterung im Vakuumtank\\hier einfuegen}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Thermische Analyse der Spule}
+  \small
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \textbf{Motivation}
+      \begin{itemize}
+        \item Die HF-Spule ist im Dauerbetrieb eine relevante Waermequelle
+        \item Waermeeintrag in umliegende Bauteile (v.\,a.\ Isolatoren wie Teflon/GFK) kann Materialgrenzen erreichen
+      \end{itemize}
+      \vspace{0.25em}
+      \textbf{Vorgehen}
+      \begin{itemize}
+        \item FEM-Simulation der Waermeleitung/-abstrahlung im Vakuum (keine Konvektion)
+        \item Abgleich mit \todo{Messdaten/Randbedingungen}
+      \end{itemize}
+      \vspace{0.25em}
+      \textbf{Ziel}
+      \begin{itemize}
+        \item Temperaturgrenzen der Materialien einhalten, Auslegung der Halterung absichern
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \centering
+      \bildplatzhalter{5.4}{5.0}{Temperaturfeld /\\Simulationsergebnis\\hier einfuegen}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\section{Geplante Charakterisierung}
+
+% ============================================================
+\begin{frame}{Koppeltest: geplante Messkampagne}
+  \centering
+  \begin{tikzpicture}[
+      comp/.style={draw=giessenblau, thick, rounded corners, fill=hellblau, minimum height=1.1cm, align=center, font=\small},
+      lbl/.style={font=\scriptsize, text=grauton}
+    ]
+    \node[comp, minimum width=2.0cm] (rit) {RIT-10\\(O$_2$)};
+    \node[comp, minimum width=2.6cm, right=1.2cm of rit] (bridge) {Plasmabruecke};
+    \node[comp, minimum width=2.0cm, right=1.2cm of bridge] (neu) {Neutralisator};
+    \node[comp, minimum width=1.8cm, right=1.4cm of neu] (catch) {Catcher};
+
+    \draw[-{Latex}, giessenblau, thick] (rit) -- (bridge);
+    \draw[giessenblau, thick, dashed] (bridge) -- (neu);
+    \draw[-{Latex}, giessenblau, thick] (rit.north) .. controls +(1.0,1.0) and +(-1.0,1.0) .. (catch.north);
+
+    \node[lbl, below=0.15cm of bridge] {Langmuirsonde};
+    \node[lbl, above=0.15cm of neu, text width=2.4cm, align=center] {Winkel $\theta$ variabel};
+    \node[lbl, below=0.15cm of catch] {+ Blende};
+  \end{tikzpicture}
+  \vspace{0.4em}
+  \small
+  \begin{itemize}
+    \item \textbf{Langmuirsonden-Messung} in der Plasmabruecke (Elektronendichte, -temperatur, Plasmapotential)
+    \item \textbf{Variation des Neutralisatorwinkels} relativ zum Ionenstrahl
+    \item \textbf{Austausch von Catcher und Blende} (Geometrie/Material)
+    \item weitere Charakterisierung: Kopplungsspannung, Stabilitaet, Strahlprofil
+  \end{itemize}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Diagnostik-Schwerpunkt: Langmuirsonde in der Plasmabrücke}
+  \begin{itemize}
+    \item Erfassung von Elektronendichte $n_e$, Elektronentemperatur $T_e$ und Plasmapotential entlang der Bruecke
+    \item Ableitung der \alert{Kopplungsspannung} zwischen Neutralisator-Kathode und Tankmasse als Mass fuer effiziente Elektroneneinkopplung
+    \item Methodik angelehnt an etablierte Sondendiagnostik an Ionenstrahl-Neutralisatoren \cite{roibas2013,appl2024}
+  \end{itemize}
+  \vspace{0.5em}
+  \begin{alertblock}{Zu beachten}
+    Sondenstoerung des Plasmas, Positioniergenauigkeit, Kalibrierung -- Details siehe Feedback
+  \end{alertblock}
+\end{frame}
+
+\section{Stand und Zeitplan}
+
+% ============================================================
+\begin{frame}{Stand der Arbeit}
+  \footnotesize
+  \renewcommand{\arraystretch}{0.95}
+  \begin{tabular}{@{}L{4.4cm}L{2.0cm}L{4.6cm}@{}}
+    \toprule
+    \textbf{Arbeitspaket} & \textbf{Status} & \textbf{Bemerkung} \\
+    \midrule
+    Anforderungsanalyse Halterung & \statusfertig & \\
+    CAD-Design Halterung & \statuslaufend & \todo{Stand \%} \\
+    Thermische Analyse Spule & \statuslaufend & \todo{Modellstand} \\
+    Fertigung/Beschaffung & \statusoffen & \todo{Termin} \\
+    Integration in Obelix & \statusoffen & \\
+    Koppeltest-Messkampagne & \statusoffen & Masterarbeit \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.5em}
+  \small
+  \begin{block}{Nächste Schritte}
+    \todo{z.\,B.\ Konstruktion abschliessen bis ...; Simulation validieren bis ...; erster Testeinbau ab ...}
+  \end{block}
+\end{frame}
+
+\section{Zusammenfassung}
+
+% ============================================================
+\begin{frame}{Zusammenfassung}
+  \begin{block}{Was bereits gezeigt ist}
+    RIT-10 und HF-Neutralisator funktionieren mit O$_2$/N$_2$ im \textbf{getrennten} Betrieb (Zorn et al.\ 2025)
+  \end{block}
+  \vspace{0.5em}
+  \begin{alertblock}{Mein Beitrag}
+    \begin{itemize}
+      \item Mechanisches Design + thermische Analyse (Spezialisierungsprojekt)
+      \item Erster systematischer \textbf{Koppeltest} von Triebwerk und Neutralisator inkl.\ Winkel-, Catcher- und Blendenvariation (Masterarbeit)
+    \end{itemize}
+  \end{alertblock}
+\end{frame}
+
+\section{Referenzen}
+
+% ============================================================
+\begin{frame}{Referenzen (1/2)}
+  \footnotesize
+  \begin{thebibliography}{99}
+    \bibitem{zorn2025} J.\ Zorn, K.\,J.\ Br\"aumer, R.\ Sandoval Rodriguez, P.\,J.\ Klar,
+      \emph{Characterization of the performance of a RIT-10 and rf-neutralizer for an ABEP system},
+      J.\ Electric Propulsion \textbf{4}, 68 (2025). doi:10.1007/s44205-025-00170-w
+    \bibitem{holste2020} K.\ Holste et al.\ (inkl.\ J.\ Zorn, P.\,J.\ Klar),
+      \emph{Ion thrusters for electric propulsion: Scientific issues developing a niche technology into a game changer},
+      Rev.\ Sci.\ Instrum.\ \textbf{91}, 061101 (2020). doi:10.1063/5.0010134
+    \bibitem{zheng2020} P.\ Zheng, J.\ Wu, Y.\ Zhang, B.\ Wu,
+      \emph{A Comprehensive Review of Atmosphere-Breathing Electric Propulsion Systems},
+      Int.\ J.\ Aerospace Eng.\ 2020, 8811847.
+    \bibitem{romano2018} F.\ Romano, B.\ Massuti-Ballester, T.\ Binder, G.\ Herdrich, S.\ Fasoulas,
+      \emph{System analysis and test-bed for an atmosphere-breathing electric propulsion system using an inductive plasma thruster},
+      Acta Astronautica \textbf{147}, 114--126 (2018).
+  \end{thebibliography}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Referenzen (2/2)}
+  \footnotesize
+  \begin{thebibliography}{99}
+    \bibitem{romano2022} F.\ Romano et al.,
+      \emph{Intake design for an Atmosphere-Breathing Electric Propulsion System (ABEP)},
+      Acta Astronautica (2022).
+    \bibitem{roibas2013} E.\ Roib\'as-Mill\'an et al.,
+      \emph{Characterization of the Ion Beam Neutralization of Plasma Thrusters Using Collecting and Emissive Langmuir Probes},
+      Contrib.\ Plasma Phys.\ \textbf{53} (2013). doi:10.1002/ctpp.201310010
+    \bibitem{appl2024} \emph{Determination of Self-Neutralization Phenomena of Ion Beams with Langmuir Probe Measurements and PIC-DSMC Simulations},
+      Appl.\ Sci.\ \textbf{14}(8), 3470 (2024). doi:10.3390/app14083470
+  \end{thebibliography}
+\end{frame}
+
+% ============================================================
+{
+\setbeamertemplate{footline}{}
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west, inner sep=0pt] at ([xshift=0.9cm,yshift=-0.6cm]current page.north west)
+      {\includegraphics[height=1.0cm]{img/JLU_Giessen-Logo.pdf}};
+    \draw[giessenblau, line width=0.8pt] ([yshift=-1.7cm]current page.north west) -- ([yshift=-1.7cm]current page.north east);
+    \draw[giessenblau, line width=0.8pt] ([yshift=1.6cm]current page.south west) -- ([yshift=1.6cm]current page.south east);
+  \end{tikzpicture}
+  \vspace{3.2cm}
+  \begin{center}
+    {\LARGE\bfseries\color{giessenblau} Vielen Dank}\\[0.8em]
+    {\Large\color{grauton} Fragen?}\\[2.2em]
+    {\small\color{grauton} Konrad Wehkamp \quad\textperiodcentered\quad Koppeltest ABEP \quad\textperiodcentered\quad \vortragsdatum}
+  \end{center}
+\end{frame}
+}
+
+\end{document}
