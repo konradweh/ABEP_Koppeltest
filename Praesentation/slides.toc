@@ -1,0 +1,10 @@
+\babel@toc {ngerman}{}\relax 
+\beamer@sectionintoc {1}{Motivation}{3}{0}{1}
+\beamer@sectionintoc {2}{Technologie am Institut}{4}{0}{2}
+\beamer@sectionintoc {3}{Ausgangslage}{5}{0}{3}
+\beamer@sectionintoc {4}{Meine Aufgabe}{6}{0}{4}
+\beamer@sectionintoc {5}{Versuchsaufbau}{7}{0}{5}
+\beamer@sectionintoc {6}{Geplante Charakterisierung}{9}{0}{6}
+\beamer@sectionintoc {7}{Stand und Zeitplan}{11}{0}{7}
+\beamer@sectionintoc {8}{Zusammenfassung}{12}{0}{8}
+\beamer@sectionintoc {9}{Referenzen}{13}{0}{9}

@@ -89,7 +89,7 @@
 \newcommand{\hinweis}[1]{{\small\color{grauton} #1}}
 
 % ── Meta ───────────────────────────────────────────────────────────────────
-\newcommand{\vortragsdatum}{\todo{Datum des Vortrags eintragen}}
+\newcommand{\vortragsdatum}{15.10.2026}
 \title{Koppeltest eines luftatmenden Ionentriebwerks}
 \subtitle{RIT-10 (O\textsubscript{2}) und HF-Neutralisator im Vakuumtank ``Obelix''}
 \author{Konrad Wehkamp}
@@ -105,7 +105,11 @@
 % ============================================================
 {
 \setbeamertemplate{footline}{}
-\begin{frame}[plain]
+% [plain,c]: vertikal zentriert zwischen Kopf- und Fusszeile. Bei fixem
+% \vspace haengt der Abstand zur unteren Linie von der genauen Textlaenge
+% ab (z.B. wenn die Betreuung-Zeile gekuerzt wird) und passt dann nicht
+% mehr; die Zentrierung bleibt unabhaengig vom Inhalt symmetrisch.
+\begin{frame}[plain,c]
   \begin{tikzpicture}[remember picture, overlay]
     \node[anchor=north west, inner sep=0pt] at ([xshift=0.9cm,yshift=-0.6cm]current page.north west)
       {\includegraphics[height=1.0cm]{img/JLU_Giessen-Logo.pdf}};
@@ -116,7 +120,6 @@
     \draw[giessenblau, line width=0.8pt] ([yshift=1.6cm]current page.south west) -- ([yshift=1.6cm]current page.south east);
   \end{tikzpicture}
 
-  \vspace{2.0cm}
   \begin{center}
     {\usebeamerfont{title}\LARGE\bfseries\color{giessenblau} Koppeltest eines luftatmenden Ionentriebwerks}\\[0.7em]
     {\Large\color{grauton} RIT-10 (O\textsubscript{2}) und HF-Neutralisator im Vakuumtank ``Obelix''}\par
@@ -126,7 +129,7 @@
     \vspace{0.6cm}
     {\small
       \begin{tabular}{r l}
-        Betreuung: & Jana Zorn \textperiodcentered\ Dr.\ Kristof Holste \textperiodcentered\ Prof.\ Dr.\ Peter J.\ Klar \\
+        Betreuung: & Jana Zorn\\
         Rahmen: & Spezialisierungsprojekt / Vorbereitung Masterarbeit \\
         Datum: & \vortragsdatum \\
       \end{tabular}
@@ -239,7 +242,7 @@
 \begin{frame}{Meine Aufgabe im Überblick}
   \centering
   \begin{tikzpicture}[
-      box/.style={draw=giessenblau, thick, rounded corners, fill=hellblau, text width=5.8cm, align=left, font=\footnotesize, inner sep=7pt},
+      box/.style={draw=giessenblau, thick, rounded corners, fill=hellblau, text width=5.5cm, align=left, font=\footnotesize, inner sep=7pt},
       lbl/.style={font=\bfseries\small, text=giessenblau}
     ]
     \node[box] (spez) {
@@ -249,7 +252,7 @@
         \item Thermische Analyse der HF-Spule und umliegender Bauteile
       \end{itemize}
     };
-    \node[box, right=0.9cm of spez] (masta) {
+    \node[box, right=1.7cm of spez] (masta) {
       {\bfseries\small Masterarbeit}\\[0.15em]
       \begin{itemize}
         \item Integration in den Vakuumtank ``Obelix''
@@ -257,7 +260,10 @@
         \item Charakterisierung der Kopplung (Plasmabruecke, Winkel, Catcher/Blende)
       \end{itemize}
     };
-    \draw[-{Latex}, grauton, thick] (spez) -- (masta) node[midway, above, font=\scriptsize] {Grundlage fuer};
+    % text width knapp unter der Luecke, damit das Label umbricht statt an
+    % die Kaesten zu stossen (das war bei einer Zeile in 0.9cm Luecke der Fall)
+    \draw[-{Latex}, grauton, thick] (spez) -- (masta)
+      node[midway, above, font=\scriptsize, text width=1.5cm, align=center] {Grundlage f\"ur};
   \end{tikzpicture}
   \vspace{0.4em}
 
@@ -449,14 +455,13 @@
 % ============================================================
 {
 \setbeamertemplate{footline}{}
-\begin{frame}[plain]
+\begin{frame}[plain,c]
   \begin{tikzpicture}[remember picture, overlay]
     \node[anchor=north west, inner sep=0pt] at ([xshift=0.9cm,yshift=-0.6cm]current page.north west)
       {\includegraphics[height=1.0cm]{img/JLU_Giessen-Logo.pdf}};
     \draw[giessenblau, line width=0.8pt] ([yshift=-1.7cm]current page.north west) -- ([yshift=-1.7cm]current page.north east);
     \draw[giessenblau, line width=0.8pt] ([yshift=1.6cm]current page.south west) -- ([yshift=1.6cm]current page.south east);
   \end{tikzpicture}
-  \vspace{3.2cm}
   \begin{center}
     {\LARGE\bfseries\color{giessenblau} Vielen Dank}\\[0.8em]
     {\Large\color{grauton} Fragen?}\\[2.2em]
