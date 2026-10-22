@@ -1,0 +1,10 @@
+# Autodesk Inventor / AutoCAD Sperr- und Temporärdateien
+*.lck
+*.tmp
+~*
+*.dwl
+*.dwl2
+*.sv$
+
+# Inventor-Backup-Ordner (manuelle Altversionen) - Git-Historie ersetzt das
+**/OldVersions/
