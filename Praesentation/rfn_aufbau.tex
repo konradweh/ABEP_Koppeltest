@@ -1,0 +1,396 @@
+% !TeX program = pdflatex
+% Kompilieren mit: pdflatex rfn_aufbau.tex (zweimal)
+% Gleicher Stil wie slides.tex (Koppeltest). Bilder liegen in img/.
+% img/JLU_Giessen-Logo.pdf aus dem Ordner der anderen Praesentation hierher kopieren.
+\documentclass[10pt,aspectratio=169]{beamer}
+
+% ── Theme ──────────────────────────────────────────────────────────────────
+\usetheme{metropolis}
+
+% ── Pakete ─────────────────────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,fit,backgrounds,calc,shapes.geometric}
+\usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{siunitx}
+\sisetup{locale = DE, per-mode=symbol}
+\usepackage{textcomp}
+\makeatletter
+\let\jlu@olditemize\itemize
+\let\jlu@oldenditemize\enditemize
+\renewenvironment{itemize}
+  {\jlu@olditemize\setlength{\itemsep}{1pt}\setlength{\parsep}{0pt}\setlength{\topsep}{2pt}}
+  {\jlu@oldenditemize}
+\makeatother
+
+% ── Farben ─────────────────────────────────────────────────────────────────
+\definecolor{giessenblau}{RGB}{28,54,88}
+\definecolor{hellblau}{RGB}{230,234,240}
+\definecolor{grauton}{RGB}{95,102,110}
+\definecolor{hellgrau}{RGB}{236,236,237}
+
+\setbeamercolor{palette primary}{bg=giessenblau,fg=white}
+\setbeamercolor{frametitle}{bg=white,fg=giessenblau}
+\setbeamercolor{progress bar}{fg=giessenblau,bg=giessenblau!20}
+\setbeamercolor{alerted text}{fg=giessenblau}
+\setbeamercolor{example text}{fg=grauton}
+\setbeamertemplate{itemize item}{\color{giessenblau}\textbullet}
+\setbeamertemplate{itemize subitem}{\color{grauton}\textendash}
+\setbeamercolor{block title}{bg=giessenblau,fg=white}
+\setbeamercolor{block body}{bg=hellblau}
+\setbeamercolor{block title alerted}{bg=grauton,fg=white}
+\setbeamercolor{block body alerted}{bg=hellgrau,fg=black}
+
+\metroset{sectionpage=none, numbering=fraction, progressbar=frametitle}
+\makeatletter
+\setlength{\metropolis@progressinheadfoot@linewidth}{2pt}
+\makeatother
+
+\newcommand{\todo}[1]{\textcolor{giessenblau}{\bfseries [TODO: #1]}}
+\newcommand{\bildplatzhalter}[3]{%
+  \begin{tikzpicture}
+    \draw[grauton, dashed, thick, rounded corners=2pt] (0,0) rectangle (#1,#2);
+    \node[grauton, align=center, text width=#1 cm-0.8cm] at ({#1/2},{#2/2}) {\small #3};
+  \end{tikzpicture}%
+}
+\newcommand{\hinweis}[1]{{\small\color{grauton} #1}}
+% Pro/Contra-Zeichen
+\newcommand{\pro}{\textcolor{giessenblau}{\textbf{+}}}
+\newcommand{\con}{\textcolor{grauton}{\textbf{--}}}
+
+% ── Meta ───────────────────────────────────────────────────────────────────
+\newcommand{\vortragsdatum}{22.10.2026}
+\title{Neue Blendenaufnahme des HF-Neutralisators}
+\subtitle{Aufbau, Dichtkonzept und Bauteile}
+\author{Konrad Wehkamp}
+\date{}
+
+\begin{document}
+
+% ============================================================
+{
+\setbeamertemplate{footline}{}
+\begin{frame}[plain,c]
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west, inner sep=0pt] at ([xshift=0.9cm,yshift=-0.6cm]current page.north west)
+      {\includegraphics[height=1.0cm]{img/JLU_Giessen-Logo.pdf}};
+    \node[anchor=north east, inner sep=0pt, text width=6cm, align=right, font=\scriptsize\color{grauton}]
+      at ([xshift=-0.9cm,yshift=-0.55cm]current page.north east)
+      {I.\ Physikalisches Institut\\AG Ionentriebwerke};
+    \draw[giessenblau, line width=0.8pt] ([yshift=-1.7cm]current page.north west) -- ([yshift=-1.7cm]current page.north east);
+    \draw[giessenblau, line width=0.8pt] ([yshift=1.6cm]current page.south west) -- ([yshift=1.6cm]current page.south east);
+  \end{tikzpicture}
+
+  \begin{center}
+    {\usebeamerfont{title}\LARGE\bfseries\color{giessenblau} Neue Blendenaufnahme des HF-Neutralisators}\\[0.7em]
+    {\Large\color{grauton} Aufbau, Dichtkonzept und Bauteile}\par
+    \vspace{0.9cm}
+    {\large\textbf{Konrad Wehkamp}}\\[0.3em]
+    {\small Masterstudiengang PTRA (Physics and Technology for Space Applications)}\par
+    \vspace{0.6cm}
+    {\small
+      \begin{tabular}{r l}
+        Betreuung: & Jana Zorn\\
+        Rahmen: & Spezialisierungsprojekt / Vorbereitung Masterarbeit \\
+        Datum: & \vortragsdatum \\
+      \end{tabular}
+    }
+  \end{center}
+\end{frame}
+}
+
+% ============================================================
+\begin{frame}{Warum eine neue Aufnahme}
+  \vfill
+  Der erste Neutralisator läuft. Die untere Aufnahme hat aber drei Schwächen,
+  die bei der Charakterisierung stören.
+
+  \vspace{0.6em}
+  \begin{itemize}
+    \item Die Blende liegt lose auf einem GFK-Ring. Ob ihr Rand am Glas anliegt, entscheidet die Toleranz,
+          ein Teil des Gases kann an den Löchern vorbei in den Tank
+    \item Der O-Ring dichtet axial unter dem Glasboden, seine Verpressung hängt an der Höhe des Glasfußes
+    \item Kontaktiert wird die Blende von der Austrittsseite über ein Gewinde
+  \end{itemize}
+
+  \vspace{0.6em}
+  Gleichzeitig soll die Blende ein Wechselteil werden, um verschiedene Lochbilder zu testen.
+  \vfill
+\end{frame}
+
+% ============================================================
+\begin{frame}{Anforderungen}
+  \vfill
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \small
+      \begin{block}{Funktion}
+        \begin{itemize}
+          \item Glasraum gasdicht gegen die Spulenkammer
+          \item Blende fest angedrückt, kein Gas am Lochfeld vorbei
+          \item Kein zusätzliches Material hinter der Blende, auch nicht weiter außen
+          \item Blende isoliert und von oben kontaktiert
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \small
+      \begin{block}{Handhabung}
+        \begin{itemize}
+          \item Blende tauschbar, Lochbilder bis Ø\,40\,mm
+          \item RFN komplett montiert an die Frontplatte schrauben und wieder abnehmen
+          \item Glasfuß bleibt die einzige feste Einspannung des Glases
+          \item Einziger harter Anschlag: oberer GFK-Ring auf dem Edelstahlring
+          \item Vakuumtauglich, keine eingeschlossenen Volumen
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vfill
+\end{frame}
+
+% ============================================================
+\begin{frame}{Gesamtbild}
+  \centering
+  \includegraphics[height=5.5cm]{img/rfn_schnitt3d.png}
+
+  \vspace{0.4em}
+  \hinweis{Viertelschnitt durch Frontplatte, Träger, Edelstahlring, GFK-Ring oben und Glas.
+  Rechts ist eine Federschraube angeschnitten, dahinter der Kontaktbolzen.}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Halbschnitt}
+  \centering
+  \includegraphics[width=\textwidth,height=5.8cm,keepaspectratio]{img/halbschnitt.pdf}
+
+  \hinweis{Maße in mm, z ab Blendenunterseite. Hinter der Blende nur noch 1,5\,mm Klemmring statt 1,9\,mm.}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Bauteile}
+  \begin{columns}[T]
+    \begin{column}{0.66\textwidth}
+      \scriptsize
+      \renewcommand{\arraystretch}{1.15}
+      \begin{tabular}{@{}L{2.1cm}L{1.6cm}L{4.6cm}@{}}
+        \toprule
+        \textbf{Teil} & \textbf{Werkstoff} & \textbf{Aufgabe} \\
+        \midrule
+        Blende & Mo & 0,5\,mm, Wechselteil, Ø\,72, Lochfeld bis Ø\,40 \\
+        Klemmring & 1.4301 & 1,5\,mm, klemmt die Blende, Lasche für den Kontakt \\
+        Träger & GFK & Ø\,80 g6 in der Frontplatte, isoliert, Gewindeeinsätze \\
+        Edelstahlring & 1.4301 & beide O-Ring-Nuten, Gewinde für Federn und Bleche \\
+        GFK-Ring oben & GFK & drückt federnd auf den Glasfuß \\
+        O-Ring radial & FFKM & 61,5\,×\,2,65 nach DIN\,3771, auf dem Glasfuß \\
+        O-Ring flach & FFKM & 64\,×\,1, Fuge Edelstahlring / Träger \\
+        Keramikhülse & Al\textsubscript{2}O\textsubscript{3} & führt den Kontaktbolzen isoliert nach oben \\
+        Federn, Hülsen & 1.4310, A2 & 9 Druckfedern auf Distanzhülsen, Scheibe darunter \\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \centering
+      \includegraphics[height=6.2cm]{img/rfn_explosion.png}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Kraftfluss}
+  \vfill
+  \centering
+  \begin{tikzpicture}[
+      box/.style={draw=giessenblau, fill=hellblau, rounded corners=2pt, minimum height=0.8cm,
+                  minimum width=2.1cm, font=\footnotesize, align=center},
+      spr/.style={box, draw=grauton, fill=hellgrau},
+      ar/.style={-{Latex[length=2mm]}, giessenblau, thick}]
+    \node[box] (go) {GFK-Ring\\oben};
+    \node[box, right=0.5cm of go] (gl) {Glasfuß};
+    \node[box, right=0.5cm of gl] (bl) {Blende};
+    \node[box, right=0.5cm of bl] (kr) {Klemmring};
+    \node[box, below=1.0cm of kr] (tr) {Träger\\6\,× M2};
+    \node[box, left=0.5cm of tr] (st) {Edelstahlring\\3\,× M2,5};
+    \node[box, left=0.5cm of st] (dh) {9\,× M3,\\Distanzhülse};
+    \node[spr, left=0.5cm of dh] (fe) {9\,× Feder};
+    \draw[ar] (go) -- (gl); \draw[ar] (gl) -- (bl); \draw[ar] (bl) -- (kr);
+    \draw[ar] (kr) -- (tr); \draw[ar] (tr) -- (st); \draw[ar] (st) -- (dh);
+    \draw[ar] (dh) -- (fe); \draw[ar] (fe) -- (go);
+  \end{tikzpicture}
+
+  \vspace{1.0em}
+  \raggedright
+  \begin{itemize}
+    \item Im geschlossenen Kreis sitzt genau ein nachgiebiges Element, die neun Federn. Rund 110\,N halten das Glas auf der Blende
+    \item Die Distanzhülsen begrenzen den Federweg. Die Kraft hängt nicht davon ab, wie fest man die Schrauben anzieht
+    \item Zwischen GFK-Ring und Stahl bleiben 0,3\,mm Luft. Erst bei Überlast liegt er dort an
+    \item Die Frontplatte liegt außerhalb des Kreises. Sie trägt den RFN, klemmt aber nicht das Glas
+  \end{itemize}
+  \vfill
+\end{frame}
+
+% ============================================================
+\begin{frame}{Dichtkonzept}
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \small
+      \textbf{Glasraum gegen Spulenkammer}
+      \begin{itemize}
+        \item Radialer O-Ring auf dem Glasfuß. Die Höhe des Glases spielt keine Rolle mehr
+        \item Verpressung 19\,\%, bei ganz außermittigem Glas 15 bis 23\,\%
+        \item Sitzt im Edelstahlring, 5\,mm über der Blende
+        \item Zweiter, flacher O-Ring schließt die Fuge zwischen Stahl und Träger
+      \end{itemize}
+      \vspace{0.4em}
+      \textbf{Glasraum gegen Tank, am Lochfeld vorbei}
+      \begin{itemize}
+        \item Glasboden auf Blende und Blende auf Träger, zwei Anpressflächen hintereinander
+        \item Nicht elastisch dicht, aber nicht mehr lose
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{img/rfn_detail.png}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Kontaktierung der Blende}
+  \begin{columns}[T]
+    \begin{column}{0.45\textwidth}
+      \small
+      \vspace{0.6em}
+      Eine Gewindestange M2,5 sitzt in der Lasche des Klemmrings und läuft in einer
+      Keramikhülse durch Edelstahlring und GFK-Ring nach oben.
+
+      \vspace{0.6em}
+      Die Mutter oben stützt sich auf die Hülse. Der Bolzen zieht so die Lasche an den Träger,
+      ohne den federnden GFK-Ring zu belasten.
+
+      \vspace{0.6em}
+      Zum Blendenwechsel Kontermutter, Kabelschuh und Mutter abnehmen und den Klemmring
+      samt Bolzen nach hinten herausziehen. Glas und GFK-Ring bleiben montiert.
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \centering
+      \includegraphics[width=\linewidth,height=6.0cm,keepaspectratio]{img/kontakt.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Montage und Befestigung}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \footnotesize
+      \begin{enumerate}
+        \item Träger mit Flach-O-Ring an den Edelstahlring schrauben
+        \item Blende und Klemmring von hinten einsetzen, Kontaktbolzen durch die Hülse
+        \item Glas durch den radialen O-Ring bis auf die Blende schieben
+        \item GFK-Ring auflegen, Hülsen, Federn und neun M3 einsetzen
+        \item Fertigen RFN in die Frontplatte stecken, auf den Passstift drehen
+        \item Drei M2 durch offene Nuten im GFK-Ring anziehen
+      \end{enumerate}
+      \vspace{0.4em}
+      \hinweis{Abnehmen geht umgekehrt, der RFN bleibt dabei komplett montiert.}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \includegraphics[width=\linewidth,height=6.0cm,keepaspectratio]{img/draufsicht.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Vakuum: eingeschlossene Volumen}
+  \begin{columns}[T]
+    \begin{column}{0.44\textwidth}
+      \footnotesize
+      Rundum verpresste Sacklöcher und Fugen wären virtuelle Lecks.
+      \begin{itemize}
+        \item Ringnut unten im Stahlring verbindet M3-Gewinde, M2,5-Löcher und Hülsenbohrung
+        \item Drei Bohrungen Ø\,1 im Träger führen nach hinten in den Tank
+        \item Kerben an Flachnut, Klemmring und unter der Keramikhülse
+      \end{itemize}
+      \vspace{0.4em}
+      Der Ringraum um den Glasfuß (0,6\,cm\textsuperscript{3}) bleibt absichtlich zu, er liegt zwischen den Anpressflächen an der Blende. Gegenüber dem Gasfluss ist er bedeutungslos.
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \centering
+      \includegraphics[width=\linewidth,height=5.6cm,keepaspectratio]{img/entlueftung.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Vor- und Nachteile}
+  \begin{columns}[T]
+    \begin{column}{0.49\textwidth}
+      \footnotesize
+      \begin{block}{Vorteile}
+        \begin{itemize}
+          \item[\pro] Blende definiert angedrückt, Nebenweg zweifach gepresst statt lose
+          \item[\pro] O-Ring unabhängig von der Glashöhe
+          \item[\pro] Federkraft definiert, Toleranz des Glasfußes ändert sie nur um rund 1\,N je Feder
+          \item[\pro] 1,5 statt 1,9\,mm Material hinter der Blende
+          \item[\pro] Blendenwechsel ohne Glas oder GFK-Ring abzunehmen
+          \item[\pro] RFN montiert an- und abschraubbar
+          \item[\pro] Komplett parametrisch, 160 Parameter mit Prüfungen
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \footnotesize
+      \begin{alertblock}{Nachteile und Risiken}
+        \begin{itemize}
+          \item[\con] Mehr Einzelteile und eine zweite Dichtstelle
+          \item[\con] FFKM-O-Ring am Glasfuß wie im ersten RFN, Temperatur am neuen Ort noch nicht gerechnet
+          \item[\con] Träger aus GFK liegt an der Blende und trägt neun Gewindeeinsätze
+          \item[\con] Nur 0,1\,mm Spiel am Glasfuß, Durchmesser und Rundheit müssen stimmen
+          \item[\con] Dichtheit am Lochfeld hängt an der Planheit von Glasboden und Blende
+          \item[\con] Abdeckbleche brauchen neue Bohrungen
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Offene Punkte}
+  \vfill
+  \begin{itemize}
+    \item Glasfuß vermessen: Durchmesser, Rundheit, Höhe. Nuten und Bohrungen folgen automatisch
+    \item COMSOL mit der neuen Geometrie: Temperatur an Träger, O-Ring und Federn.
+          Reserve bei zu heißem Träger: Polyimid (Vespel)
+    \item Druckfedern aus dem Katalog wählen, die Werte sind noch Platzhalter. Prüfen, ob über dem GFK-Ring 2\,mm Platz für die Schraubenköpfe sind
+    \item Abdeckbleche an die versetzten Gewinde anpassen
+    \item Frontplatte und Teile in die Fertigung geben
+  \end{itemize}
+  \vfill
+\end{frame}
+
+% ============================================================
+{
+\setbeamertemplate{footline}{}
+\begin{frame}[plain,c]
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west, inner sep=0pt] at ([xshift=0.9cm,yshift=-0.6cm]current page.north west)
+      {\includegraphics[height=1.0cm]{img/JLU_Giessen-Logo.pdf}};
+    \draw[giessenblau, line width=0.8pt] ([yshift=-1.7cm]current page.north west) -- ([yshift=-1.7cm]current page.north east);
+    \draw[giessenblau, line width=0.8pt] ([yshift=1.6cm]current page.south west) -- ([yshift=1.6cm]current page.south east);
+  \end{tikzpicture}
+  \begin{center}
+    {\LARGE\bfseries\color{giessenblau} Vielen Dank}\\[0.8em]
+    {\Large\color{grauton} Fragen?}\\[2.2em]
+    {\small\color{grauton} Konrad Wehkamp \quad\textperiodcentered\quad Blendenaufnahme RFN \quad\textperiodcentered\quad \vortragsdatum}
+  \end{center}
+\end{frame}
+}
+
+\end{document}

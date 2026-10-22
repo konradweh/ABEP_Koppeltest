@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.26)  14 SEP 2026 15:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.26)  30 SEP 2026 23:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -792,8 +792,10 @@ File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count392
+) (slides.aux
+Package babel Info: 'ngerman' activates 'german' shorthands.
+(babel)             Reported on input line 8.
 )
-No file slides.aux.
 \openout1 = `slides.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
@@ -814,6 +816,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
 LaTeX Font Info:    ... okay on input line 101.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 101.
 LaTeX Font Info:    ... okay on input line 101.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -868,6 +871,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring OFF on input line 101.
+ (slides.out) (slides.out)
 \@outlinefile=\write5
 \openout5 = `slides.out'.
 
@@ -929,16 +933,11 @@ Dictionary: translator-months-dictionary, Language: English
 Dictionary: translator-numbers-dictionary, Language: English 
 ) (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-)
-Package babel Info: 'ngerman' activates 'german' shorthands.
-(babel)             Reported on input line 101.
- (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-german.trsl
+) (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-german.trsl
 File: translations-basic-dictionary-german.trsl (german translation file `translations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 101.
-
-No file slides.nav.
-
+ (slides.nav)
 
 pdfTeX warning: pdflatex (file ./img/JLU_Giessen-Logo.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <img/JLU_Giessen-Logo.pdf, id=12, 218.31563pt x 79.04532pt>
@@ -1007,74 +1006,97 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
  [1
 
 {C:/Users/kw/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./img/JLU_Giessen-Logo.pdf>]
-No file slides.toc.
-[2
-
-]
-LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 177.
+LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 155.
  (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
 File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [3
+) [2
 
-{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+<img/gesamtbild.png, id=32, 853.68938pt x 774.64406pt>
+File: img/gesamtbild.png Graphic file (type png)
+<use img/gesamtbild.png>
+Package pdftex.def Info: img/gesamtbild.png  used on input line 166.
+(pdftex.def)             Requested size: 188.12488pt x 170.71652pt.
 
-LaTeX Warning: Citation `holste2020' on page 4 undefined on input line 205.
+Overfull \vbox (1.58034pt too high) detected at line 166
+ []
+
+[3
+
+ <./img/gesamtbild.png>]
+<img/tisch.png, id=40, 1195.46625pt x 790.45313pt>
+File: img/tisch.png Graphic file (type png)
+<use img/tisch.png>
+Package pdftex.def Info: img/tisch.png  used on input line 175.
+(pdftex.def)             Requested size: 258.18768pt x 170.71652pt.
+
+Overfull \vbox (1.58034pt too high) detected at line 175
+ []
 
 [4
 
-]
+ <./img/tisch.png>]
+<img/halterung.png, id=47, 916.92563pt x 816.80156pt>
+File: img/halterung.png Graphic file (type png)
+<use img/halterung.png>
+Package pdftex.def Info: img/halterung.png  used on input line 184.
+(pdftex.def)             Requested size: 146.92096pt x 130.88284pt.
+<img/halterung_kontext.png, id=48, 865.73438pt x 595.47469pt>
+File: img/halterung_kontext.png Graphic file (type png)
+<use img/halterung_kontext.png>
+Package pdftex.def Info: img/halterung_kontext.png  used on input line 184.
+(pdftex.def)             Requested size: 190.2772pt x 130.88284pt.
+ [5
 
-LaTeX Warning: Citation `zorn2025' on page 5 undefined on input line 237.
-
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 237.
-(C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [5
-
-]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 271.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 271.
+ <./img/halterung.png> <./img/halterung_kontext.png>]
+<img/neutralisator.png, id=56, 551.05875pt x 800.23969pt>
+File: img/neutralisator.png Graphic file (type png)
+<use img/neutralisator.png>
+Package pdftex.def Info: img/neutralisator.png  used on input line 193.
+(pdftex.def)             Requested size: 117.55879pt x 170.71652pt.
  [6
 
-]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 302.
- (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [7
+ <./img/neutralisator.png>] [7
 
-]
-Overfull \vbox (22.6878pt too high) detected at line 331
- []
+] [8
 
-[8
+{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
+<img/verlustdichte_closeup.png, id=77, 782.925pt x 602.25pt>
+File: img/verlustdichte_closeup.png Graphic file (type png)
+<use img/verlustdichte_closeup.png>
+Package pdftex.def Info: img/verlustdichte_closeup.png  used on input line 250.
+(pdftex.def)             Requested size: 191.20082pt x 147.07008pt.
+ [9
 
-] [9
+ <./img/verlustdichte_closeup.png (PNG copy)>]
+<img/temperatur.png, id=83, 1505.625pt x 1129.21875pt>
+File: img/temperatur.png Graphic file (type png)
+<use img/temperatur.png>
+Package pdftex.def Info: img/temperatur.png  used on input line 276.
+(pdftex.def)             Requested size: 199.1693pt x 149.37093pt.
+ [10
 
-{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
-
-LaTeX Warning: Citation `roibas2013' on page 10 undefined on input line 376.
-
-
-LaTeX Warning: Citation `appl2024' on page 10 undefined on input line 376.
-
-[10
-
-] [11
+{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./img/temperatur.png (PNG copy)>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 289.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 289.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 289.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 289.
+ [11
 
 ] [12
 
 ] [13
 
- <C:/Users/kw/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamericonarticle.pdf>] [14
-
 ]
 File: img/JLU_Giessen-Logo.pdf Graphic file (type pdf)
 <use img/JLU_Giessen-Logo.pdf>
-Package pdftex.def Info: img/JLU_Giessen-Logo.pdf  used on input line 470.
+Package pdftex.def Info: img/JLU_Giessen-Logo.pdf  used on input line 330.
 (pdftex.def)             Requested size: 78.58356pt x 28.45274pt.
- [15
+ [14
 
 ]
 \tf@nav=\write6
@@ -1091,34 +1113,21 @@ Package pdftex.def Info: img/JLU_Giessen-Logo.pdf  used on input line 470.
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-05-26>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `slides.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `slides.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  02F8F903D6312F9348363408625A3628;1110.
+Package rerunfilecheck Info: File `slides.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32259 strings out of 467509
- 699873 string characters out of 5410238
- 1052316 words of memory out of 5000000
- 60825 multiletter control sequences out of 15000+600000
- 738968 words of font info for 111 fonts, out of 8000000 for 9000
+ 32071 strings out of 467509
+ 696026 string characters out of 5410238
+ 1048143 words of memory out of 5000000
+ 60659 multiletter control sequences out of 15000+600000
+ 721789 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,13n,123p,1925b,1133s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso8.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso9.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt8.pfb>
-Output written on slides.pdf (15 pages, 310743 bytes).
+<C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
+Output written on slides.pdf (14 pages, 1933891 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 47 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 167 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 500000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

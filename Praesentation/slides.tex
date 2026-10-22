@@ -91,7 +91,7 @@
 % ── Meta ───────────────────────────────────────────────────────────────────
 \newcommand{\vortragsdatum}{15.10.2026}
 \title{Koppeltest eines luftatmenden Ionentriebwerks}
-\subtitle{RIT-10 (O\textsubscript{2}) und HF-Neutralisator im Vakuumtank ``Obelix''}
+\subtitle{RIT-10 (O\textsubscript{2}) und HF-Neutralisator}
 \author{Konrad Wehkamp}
 % \date bewusst leer: \vortragsdatum enthaelt Farbbefehle, die in der von
 % hyperref automatisch erzeugten PDF-Metadaten-Zeichenkette Probleme
@@ -139,317 +139,177 @@
 }
 
 % ============================================================
-\begin{frame}{Gliederung}
-  \tableofcontents
-\end{frame}
+\begin{frame}{Kontext}
+  \vfill
+  \large
+  RIT-10 soll künftig mit Sauerstoff(-Gemischen) laufen, zusammen mit einem HF-Neutralisator.\\
+  Ziele: Charakterisierung des Neutralisators, Koppeltest mit Triebwerk, Validierung der Simulationen.
 
-\section{Motivation}
-
-% ============================================================
-\begin{frame}{Warum luftatmende elektrische Antriebe (ABEP)?}
-  \small
-  \begin{columns}[T]
-    \begin{column}{0.56\textwidth}
-      \begin{itemize}
-        \item \textbf{VLEO} (\emph{Very Low Earth Orbit}, ca.\ 150--250\,km): bessere Erdbeobachtung, mehr Datendurchsatz, weniger Strahlenbelastung
-        \item Dort dominiert der \alert{Restatmosphaerenwiderstand} -- ohne Schubkompensation zerfaellt die Bahn in Tagen bis Wochen
-        \item Klassisch: mitgefuehrter Treibstoff (Xenon) $\Rightarrow$ begrenzte Missionsdauer
-        \item \textbf{ABEP-Idee}: Restatmosphaere (O$_2$, N$_2$) selbst als Treibstoff nutzen
-      \end{itemize}
-    \end{column}
-    \begin{column}{0.4\textwidth}
-      \centering
-      \begin{tikzpicture}[node distance=4mm, every node/.style={font=\scriptsize, align=center}]
-        \node[draw=giessenblau, thick, rounded corners, fill=hellblau, minimum width=2.8cm, minimum height=0.65cm] (in) {Lufteinlass};
-        \node[draw=giessenblau, thick, rounded corners, fill=hellblau, minimum width=2.8cm, minimum height=0.65cm, below=of in] (ion) {Ionisation (RIT)};
-        \node[draw=giessenblau, thick, rounded corners, fill=hellblau, minimum width=2.8cm, minimum height=0.65cm, below=of ion] (acc) {Beschleunigung};
-        \node[draw=giessenblau, thick, rounded corners, fill=hellblau, minimum width=2.8cm, minimum height=0.65cm, below=of acc] (neu) {Neutralisation};
-        \draw[-{Latex}, giessenblau, thick] (in) -- (ion);
-        \draw[-{Latex}, giessenblau, thick] (ion) -- (acc);
-        \draw[-{Latex}, giessenblau, thick] (acc) -- (neu);
-      \end{tikzpicture}
-    \end{column}
-  \end{columns}
-  \vspace{0.3em}
-  \begin{alertblock}{Kernidee}
-    Treibstoff ist praktisch unbegrenzt vorhanden -- die Herausforderung liegt im Triebwerk, das mit reaktiven Gasen statt Xenon arbeiten muss
-  \end{alertblock}
-\end{frame}
-
-\section{Technologie am Institut}
-
-% ============================================================
-\begin{frame}{RIT-Technologie und Neutralisator an der JLU}
-  \begin{columns}[T]
-    \begin{column}{0.5\textwidth}
-      \textbf{Funktionsprinzip RIT}
-      \begin{itemize}
-        \item Hochfrequenz-induktive Plasmaerzeugung, \alert{elektrodenlos} in der Ionisationskammer
-        \item Gitteroptik extrahiert und beschleunigt den Ionenstrahl
-        \item Keine Kathode im Entladungsraum $\Rightarrow$ hohe Lebensdauer, unempfindlich gegenueber reaktiven Gasen
-      \end{itemize}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \textbf{Neutralisator}
-      \begin{itemize}
-        \item Baugleiches HF-Prinzip, aber als \alert{Elektronenquelle} betrieben (Projekt \emph{ECHION})
-        \item Liefert Elektronen zur Ladungs- und Stromneutralisation des Ionenstrahls
-        \item Kopplung ueber eine \alert{Plasmabruecke} zwischen Neutralisator und Strahl
-      \end{itemize}
-    \end{column}
-  \end{columns}
   \vspace{0.8em}
-  \begin{block}{Einordnung}
-    Die AG Ionentriebwerke (Prof.\ Klar) entwickelt RIT-Technologie seit ueber 50 Jahren; ABEP und die dafuer noetige HF-Neutralisatorentwicklung (ECHION, DLR-gefoerdert) sind aktuelle Schwerpunkte \cite{holste2020}
-  \end{block}
+  Stand heute:
+  \begin{itemize}
+    \item Mechanische Konstruktion der Halterung ist fertig, bald in Fertigung
+    \item Spule und Glas in COMSOL simuliert (elektromagnetisch + thermisch)
+  \end{itemize} 
+  \vfill
 \end{frame}
 
-\section{Ausgangslage}
-
 % ============================================================
-\begin{frame}{Ausgangslage: Vorarbeiten von Zorn et al.\ (2025)}
-  \small
-  \begin{itemize}
-    \item RIT-10 und HF-Neutralisator wurden \textbf{getrennt} mit O$_2$, N$_2$ und Mischungen charakterisiert \cite{zorn2025}
-    \item Diagnostik: Langmuirsonden, optische Emissionsspektroskopie, Faraday-Cups, Retarding-Potential-Analyzer, Massenspektrometrie, Raman-Spektroskopie
-  \end{itemize}
-  \vspace{0.4em}
-  \begin{columns}[T]
-    \begin{column}{0.5\textwidth}
-      \begin{itemize}
-        \item Elektronendichte: $10^{16}$--$10^{17}\,\mathrm{m}^{-3}$
-        \item Elektronentemperatur: 5--8\,eV
-        \item Strahldivergenz: $\approx$20$^\circ$ (N$_2$) bis 28$^\circ$ (O$_2$)
-      \end{itemize}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{itemize}
-        \item Neutralisatorstrom bis $\approx$100\,mA bei 2\,MHz, 100\,W
-        \item Dissoziationsgrad O$_2$: 25--41\,\%
-        \item Betriebsfenster: 6--20\,sccm, 1{,}3--2{,}0\,MHz, 1400\,V Gitterspannung
-      \end{itemize}
-    \end{column}
-  \end{columns}
+% Konstruktion: vier Bild-Folien, Text bewusst auf einen Satz reduziert
+% ============================================================
+\begin{frame}{Gesamtbild der Konstruktion}
+  \centering
+  \includegraphics[height=6.0cm]{img/gesamtbild.png}
+
   \vspace{0.6em}
-  \begin{alertblock}{Erkenntnislücke}
-    Triebwerk und Neutralisator wurden bisher \textbf{einzeln} untersucht -- das \textbf{gekoppelte} Betriebsverhalten (Plasmabruecke, Winkelabhaengigkeit, Rueckwirkung auf Bauteile) ist noch offen
-  \end{alertblock}
+  \hinweis{Komplette Halterung aus, montiert im Vakuumtank.}
 \end{frame}
 
-\section{Meine Aufgabe}
-
 % ============================================================
-\begin{frame}{Meine Aufgabe im Überblick}
+\begin{frame}{Der Tisch}
   \centering
-  \begin{tikzpicture}[
-      box/.style={draw=giessenblau, thick, rounded corners, fill=hellblau, text width=5.5cm, align=left, font=\footnotesize, inner sep=7pt},
-      lbl/.style={font=\bfseries\small, text=giessenblau}
-    ]
-    \node[box] (spez) {
-      {\bfseries\small Spezialisierungsprojekt}\\[0.15em]
-      \begin{itemize}
-        \item Mechanisches Design der Halterung (CAD)
-        \item Thermische Analyse der HF-Spule und umliegender Bauteile
-      \end{itemize}
-    };
-    \node[box, right=1.7cm of spez] (masta) {
-      {\bfseries\small Masterarbeit}\\[0.15em]
-      \begin{itemize}
-        \item Integration in den Vakuumtank ``Obelix''
-        \item Koppeltest RIT-10 (O$_2$) + Neutralisator
-        \item Charakterisierung der Kopplung (Plasmabruecke, Winkel, Catcher/Blende)
-      \end{itemize}
-    };
-    % text width knapp unter der Luecke, damit das Label umbricht statt an
-    % die Kaesten zu stossen (das war bei einer Zeile in 0.9cm Luecke der Fall)
-    \draw[-{Latex}, grauton, thick] (spez) -- (masta)
-      node[midway, above, font=\scriptsize, text width=1.5cm, align=center] {Grundlage f\"ur};
-  \end{tikzpicture}
-  \vspace{0.4em}
+  \includegraphics[height=6.0cm]{img/tisch.png}
 
-  \hinweis{\small Diese Präsentation deckt beide Teile ab -- der heutige Fokus liegt auf dem aktuellen Stand}
-\end{frame}
-
-\section{Versuchsaufbau}
-
-% ============================================================
-\begin{frame}{Versuchsaufbau: Halterung und Vakuumtank}
-  \small
-  \begin{columns}[T]
-    \begin{column}{0.52\textwidth}
-      \textbf{Anforderungen an die Halterung}
-      \begin{itemize}
-        \item Elektrische Isolation gegenueber Tankmasse
-        \item \alert{Verstellbarkeit des Neutralisatorwinkels} zum Ionenstrahl
-        \item Sondenzugang fuer Langmuirsonde
-        \item Vakuumtauglich, thermisch stabil
-      \end{itemize}
-      \vspace{0.2em}
-      \textbf{Aktuelle Baugruppen (Auszug)}
-      \begin{itemize}
-        \footnotesize
-        \item \texttt{Grundplatte}, \texttt{Seitenteil}, \texttt{Tisch}
-        \item \texttt{Teflonplatte} -- elektr.\ Isolation (PTFE)
-        \item \texttt{RFN\_Drehscheibe} -- Winkelmechanismus
-        \item \texttt{GFK\_Unterlegring}, \texttt{Ring\_unten}
-      \end{itemize}
-    \end{column}
-    \begin{column}{0.44\textwidth}
-      \centering
-      \bildplatzhalter{5.4}{5.0}{CAD-Ansicht / Rendering\\der Halterung im Vakuumtank\\hier einfuegen}
-    \end{column}
-  \end{columns}
+  \vspace{0.6em}
+  \hinweis{Teflonplatte liegt auf diesem Tisch, darauf stehen RIT-10 und Neutralisator.}
 \end{frame}
 
 % ============================================================
-\begin{frame}{Thermische Analyse der Spule}
-  \small
-  \begin{columns}[T]
-    \begin{column}{0.52\textwidth}
-      \textbf{Motivation}
-      \begin{itemize}
-        \item Die HF-Spule ist im Dauerbetrieb eine relevante Waermequelle
-        \item Waermeeintrag in umliegende Bauteile (v.\,a.\ Isolatoren wie Teflon/GFK) kann Materialgrenzen erreichen
-      \end{itemize}
-      \vspace{0.25em}
-      \textbf{Vorgehen}
-      \begin{itemize}
-        \item FEM-Simulation der Waermeleitung/-abstrahlung im Vakuum (keine Konvektion)
-        \item Abgleich mit \todo{Messdaten/Randbedingungen}
-      \end{itemize}
-      \vspace{0.25em}
-      \textbf{Ziel}
-      \begin{itemize}
-        \item Temperaturgrenzen der Materialien einhalten, Auslegung der Halterung absichern
-      \end{itemize}
-    \end{column}
-    \begin{column}{0.44\textwidth}
-      \centering
-      \bildplatzhalter{5.4}{5.0}{Temperaturfeld /\\Simulationsergebnis\\hier einfuegen}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\section{Geplante Charakterisierung}
-
-% ============================================================
-\begin{frame}{Koppeltest: geplante Messkampagne}
+\begin{frame}{Halterung für Neutralisator und Triebwerk}
   \centering
-  \begin{tikzpicture}[
-      comp/.style={draw=giessenblau, thick, rounded corners, fill=hellblau, minimum height=1.1cm, align=center, font=\small},
-      lbl/.style={font=\scriptsize, text=grauton}
-    ]
-    \node[comp, minimum width=2.0cm] (rit) {RIT-10\\(O$_2$)};
-    \node[comp, minimum width=2.6cm, right=1.2cm of rit] (bridge) {Plasmabruecke};
-    \node[comp, minimum width=2.0cm, right=1.2cm of bridge] (neu) {Neutralisator};
-    \node[comp, minimum width=1.8cm, right=1.4cm of neu] (catch) {Catcher};
+  \includegraphics[height=4.6cm]{img/halterung.png}\hspace{0.4cm}\includegraphics[height=4.6cm]{img/halterung_kontext.png}
 
-    \draw[-{Latex}, giessenblau, thick] (rit) -- (bridge);
-    \draw[giessenblau, thick, dashed] (bridge) -- (neu);
-    \draw[-{Latex}, giessenblau, thick] (rit.north) .. controls +(1.0,1.0) and +(-1.0,1.0) .. (catch.north);
+  \vspace{0.6em}
+  \hinweis{Halterung von Neutralisator und Triebwerk. Der Winkel des Neutralisators zum Strahl ist veränderlich.}
+\end{frame}
 
-    \node[lbl, below=0.15cm of bridge] {Langmuirsonde};
-    \node[lbl, above=0.15cm of neu, text width=2.4cm, align=center] {Winkel $\theta$ variabel};
-    \node[lbl, below=0.15cm of catch] {+ Blende};
-  \end{tikzpicture}
-  \vspace{0.4em}
+% ============================================================
+\begin{frame}{Der Neutralisator}
+  \centering
+  \includegraphics[height=6.0cm]{img/neutralisator.png}
+
+  \vspace{0.6em}
+  \hinweis{Innenschnitt vom Neutralisator.}
+\end{frame}
+
+% ============================================================
+% Simulation: RFN-Spule in COMSOL
+% ============================================================
+\begin{frame}{Simulation: Fragestellung und Modell}
+  \vfill
+  Die Spule sitzt außen auf dem Quarzglasgefäß des Neutralisators und koppelt bei
+  einigen Megahertz Leistung ein.\\
+  Im Vakuum gibt es keine Konvektion, Strahlung
+  ist der einzige Weg, wie sie ihre Wärme wieder loswird.
+
+  \vspace{0.6em}
+  \begin{itemize}
+    \item Spule: 3\,mm Kupferdraht, 6 Windungen, 4\,MHz, 5\,A Scheitelstrom
+    \item 60\,W Plasmaleistung wirken auf die Glasinnenwand
+    \item Drei gekoppelte Physiken: Magnetfeld, Wärmeleitung, Oberflächenstrahlung
+  \end{itemize}
+  \vfill
+\end{frame}
+
+% ============================================================
+\begin{frame}{Elektromagnetisches Ergebnis}
   \small
-  \begin{itemize}
-    \item \textbf{Langmuirsonden-Messung} in der Plasmabruecke (Elektronendichte, -temperatur, Plasmapotential)
-    \item \textbf{Variation des Neutralisatorwinkels} relativ zum Ionenstrahl
-    \item \textbf{Austausch von Catcher und Blende} (Geometrie/Material)
-    \item weitere Charakterisierung: Kopplungsspannung, Stabilitaet, Strahlprofil
-  \end{itemize}
-\end{frame}
-
-% ============================================================
-\begin{frame}{Diagnostik-Schwerpunkt: Langmuirsonde in der Plasmabrücke}
-  \begin{itemize}
-    \item Erfassung von Elektronendichte $n_e$, Elektronentemperatur $T_e$ und Plasmapotential entlang der Bruecke
-    \item Ableitung der \alert{Kopplungsspannung} zwischen Neutralisator-Kathode und Tankmasse als Mass fuer effiziente Elektroneneinkopplung
-    \item Methodik angelehnt an etablierte Sondendiagnostik an Ionenstrahl-Neutralisatoren \cite{roibas2013,appl2024}
-  \end{itemize}
-  \vspace{0.5em}
-  \begin{alertblock}{Zu beachten}
-    Sondenstoerung des Plasmas, Positioniergenauigkeit, Kalibrierung -- Details siehe Feedback
-  \end{alertblock}
-\end{frame}
-
-\section{Stand und Zeitplan}
-
-% ============================================================
-\begin{frame}{Stand der Arbeit}
-  \footnotesize
-  \renewcommand{\arraystretch}{0.95}
-  \begin{tabular}{@{}L{4.4cm}L{2.0cm}L{4.6cm}@{}}
+  \begin{tabular}{@{}L{3.6cm}L{2.4cm}L{3.2cm}L{2.2cm}@{}}
     \toprule
-    \textbf{Arbeitspaket} & \textbf{Status} & \textbf{Bemerkung} \\
+    \textbf{Größe} & \textbf{Simulation} & \textbf{Handrechnung} & \textbf{Abw.} \\
     \midrule
-    Anforderungsanalyse Halterung & \statusfertig & \\
-    CAD-Design Halterung & \statuslaufend & \todo{Stand \%} \\
-    Thermische Analyse Spule & \statuslaufend & \todo{Modellstand} \\
-    Fertigung/Beschaffung & \statusoffen & \todo{Termin} \\
-    Integration in Obelix & \statusoffen & \\
-    Koppeltest-Messkampagne & \statusoffen & Masterarbeit \\
+    Wechselstromwiderstand & 125,4\,m$\Omega$ & 55,3\,m$\Omega$ (Einzeldraht) & Faktor 2,27 \\
+    Induktivität & 1,941\,$\mu$H & 2,03\,$\mu$H (Wheeler) & 4,6\,\% \\
     \bottomrule
   \end{tabular}
-  \vspace{0.5em}
-  \small
-  \begin{block}{Nächste Schritte}
-    \todo{z.\,B.\ Konstruktion abschliessen bis ...; Simulation validieren bis ...; erster Testeinbau ab ...}
-  \end{block}
-\end{frame}
 
-\section{Zusammenfassung}
-
-% ============================================================
-\begin{frame}{Zusammenfassung}
-  \begin{block}{Was bereits gezeigt ist}
-    RIT-10 und HF-Neutralisator funktionieren mit O$_2$/N$_2$ im \textbf{getrennten} Betrieb (Zorn et al.\ 2025)
-  \end{block}
-  \vspace{0.5em}
-  \begin{alertblock}{Mein Beitrag}
-    \begin{itemize}
-      \item Mechanisches Design + thermische Analyse (Spezialisierungsprojekt)
-      \item Erster systematischer \textbf{Koppeltest} von Triebwerk und Neutralisator inkl.\ Winkel-, Catcher- und Blendenvariation (Masterarbeit)
-    \end{itemize}
-  \end{alertblock}
-\end{frame}
-
-\section{Referenzen}
-
-% ============================================================
-\begin{frame}{Referenzen (1/2)}
-  \footnotesize
-  \begin{thebibliography}{99}
-    \bibitem{zorn2025} J.\ Zorn, K.\,J.\ Br\"aumer, R.\ Sandoval Rodriguez, P.\,J.\ Klar,
-      \emph{Characterization of the performance of a RIT-10 and rf-neutralizer for an ABEP system},
-      J.\ Electric Propulsion \textbf{4}, 68 (2025). doi:10.1007/s44205-025-00170-w
-    \bibitem{holste2020} K.\ Holste et al.\ (inkl.\ J.\ Zorn, P.\,J.\ Klar),
-      \emph{Ion thrusters for electric propulsion: Scientific issues developing a niche technology into a game changer},
-      Rev.\ Sci.\ Instrum.\ \textbf{91}, 061101 (2020). doi:10.1063/5.0010134
-    \bibitem{zheng2020} P.\ Zheng, J.\ Wu, Y.\ Zhang, B.\ Wu,
-      \emph{A Comprehensive Review of Atmosphere-Breathing Electric Propulsion Systems},
-      Int.\ J.\ Aerospace Eng.\ 2020, 8811847.
-    \bibitem{romano2018} F.\ Romano, B.\ Massuti-Ballester, T.\ Binder, G.\ Herdrich, S.\ Fasoulas,
-      \emph{System analysis and test-bed for an atmosphere-breathing electric propulsion system using an inductive plasma thruster},
-      Acta Astronautica \textbf{147}, 114--126 (2018).
-  \end{thebibliography}
+  \vspace{0.8em}
+  Der Widerstand liegt weit über der einfachen Drahtformel. Die Windungen
+  liegen dicht genug beieinander, um sich gegenseitig zu beeinflussen.
 \end{frame}
 
 % ============================================================
-\begin{frame}{Referenzen (2/2)}
-  \footnotesize
-  \begin{thebibliography}{99}
-    \bibitem{romano2022} F.\ Romano et al.,
-      \emph{Intake design for an Atmosphere-Breathing Electric Propulsion System (ABEP)},
-      Acta Astronautica (2022).
-    \bibitem{roibas2013} E.\ Roib\'as-Mill\'an et al.,
-      \emph{Characterization of the Ion Beam Neutralization of Plasma Thrusters Using Collecting and Emissive Langmuir Probes},
-      Contrib.\ Plasma Phys.\ \textbf{53} (2013). doi:10.1002/ctpp.201310010
-    \bibitem{appl2024} \emph{Determination of Self-Neutralization Phenomena of Ion Beams with Langmuir Probe Measurements and PIC-DSMC Simulations},
-      Appl.\ Sci.\ \textbf{14}(8), 3470 (2024). doi:10.3390/app14083470
-  \end{thebibliography}
+\begin{frame}{Der Proximity-Effekt}
+  \vfill
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \small
+      Lehrbuchformel gilt für einen einzelnen, freistehenden Draht.\\
+      Hier: Windungen nur 2\,mm auseinander bei 3\,mm Drahtdicke.\\
+      Feld der Nachbarwindung drängt den Strom auf die dem Glas
+      zugewandte Innenseite.\\
+      Weniger als die halbe Drahtoberfläche trägt
+      den Strom, deshalb Widerstand das 2,3-fache.
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{img/verlustdichte_closeup.png}
+    \end{column}
+  \end{columns}
+  \vfill
+\end{frame}
+
+% ============================================================
+\begin{frame}{Thermisches Ergebnis}
+  \begin{columns}[T]
+    \begin{column}{0.46\textwidth}
+      \small
+      \begin{tabular}{@{}L{1.6cm}L{1.9cm}L{1.9cm}@{}}
+        \toprule
+        \textbf{Körper} & \textbf{Min} & \textbf{Max} \\
+        \midrule
+        Spule & 257,7\,$^\circ$C & 335,6\,$^\circ$C \\
+        Glas & 335,2\,$^\circ$C & 460,0\,$^\circ$C \\
+        \bottomrule
+      \end{tabular}
+
+      \vspace{0.8em}
+      Die Spule wird nicht von ihrem eigenen Strom heiß.\\
+      Sie sieht durch den Millimeter Spalt fast nur glühendes Glas und nimmt dessen
+      Strahlung auf.
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{img/temperatur.png}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Konsequenzen für die Hardware}
+  \vfill
+  \large
+  \begin{itemize}
+    \item Weichlot schmilzt bei 183 bis 190\,$^\circ$C, an der Spule muss hartgelötet oder geklemmt werden
+    \item Viton-Dichtungen sind bei diesen Temperaturen erledigt, PTFE liegt an seiner Dauergrenze
+    \item Kupfer verliert oberhalb von 200\,$^\circ$C seine Federhärte, die Wicklung braucht eine mechanische Halterung
+    \item Das Quarzglas hat einen Erweichungspunkt von 1600\,$^\circ$C
+  \end{itemize}
+  \vfill
+\end{frame}
+
+% ============================================================
+\begin{frame}{Validierung}
+  \vfill
+  \begin{itemize}
+    \item Energiebilanz übers Strahlungsgleichgewicht: 545\,K erwartet, 531\,K simuliert
+    \item Induktivität nach Wheeler: 4,6\,\% Abweichung
+    \item Netz von 317.000 auf 441.000 Elemente verfeinert: Widerstand ändert sich um 4\,\%, Temperatur um 0,6\,\%
+    \item Drei Läufe auf demselben Netz liefern identische Werte, auf ein Zehntel Milliwatt genau
+  \end{itemize}
+  \vfill
+\end{frame}
+
+% ============================================================
+\begin{frame}{Nächste Schritte}
+  \vfill
+  \large
+  \begin{itemize}
+    \item Parameterstudie über die Plasmaleistung, 30 bis 100\,W
+    \item Stromstudie von 3 bis 7\,A für die Generatorauslegung
+    \item Temperaturabhängige Leitfähigkeit des Kupfers einbauen
+  \end{itemize}
+  \vfill
 \end{frame}
 
 % ============================================================
