@@ -1,0 +1,30 @@
+RFN Blendenaufnahme, Zeichnungssatz Stand v8 (24.10.2026)
+
+DXF/       14 Zeichnungen, eine Datei je Blatt, mm, Layer nach Linienart
+PDF/       dieselben Blätter als PDF, dazu RFN_Zeichnungssatz.pdf (alle 14)
+Referenz_3D/  meine Nachbauten der Teile aus der Parametertabelle, nur zum Vergleichen
+
+Fertigung
+  CNC, Kontrollmaße:          101 Blende, 102 Klemmring, 103 Träger, 104 Edelstahlring,
+                              105 GFK-Ring oben, 107 Deckel  (Werkstatt bekommt dazu die STEP aus Inventor)
+  konventionell, voll bemaßt: 106 Abdeckblech, 108 Distanzhülse, 109 Federscheibe,
+                              110 Kontaktbolzen, 111 Keramikhülse, 112 Spulenstäbe (Drehbank),
+                              113 Spule (gewickelt)
+  100 Baugruppe mit Stückliste
+
+In Inventor als .dwg weiterbearbeiten
+  1. Datei > Öffnen, Dateityp DXF, Blatt wählen, Optionen.
+  2. Im Import-Assistenten Ziel "Neue Zeichnung" mit deiner Zeichnungsvorlage.
+  3. Layer RAHMEN und SCHRIFTFELD abwählen, wenn dein eigener Rahmen und
+     dein Schriftfeld genommen werden sollen. Sonst alles übernehmen.
+  4. Einheit mm, Maßstab 1:1. Danach speichern als Inventor-Zeichnung (.dwg).
+  Linien, Texte und Maße sind dann bearbeitbar, aber nicht mit dem 3D-Modell
+  verknüpft. Für verknüpfte Zeichnungen in Inventor eine neue Zeichnung aus dem
+  Bauteil ableiten und diese Blätter als Vorlage für Ansichten und Maße nehmen.
+  In AutoCAD reicht Öffnen und Speichern unter .dwg.
+
+Layer
+  SICHTKANTE 0,50  VERDECKT 0,25  MITTELLINIE 0,18  SCHRAFFUR  BEMASSUNG  TEXT
+  GEWINDE (dünn)  SCHNITTLINIE  RAHMEN  SCHRIFTFELD
+
+Nicht enthalten: Frontplatte (Bearbeitung Bereich RFN), dafür wird dein Plattenmodell gebraucht.
