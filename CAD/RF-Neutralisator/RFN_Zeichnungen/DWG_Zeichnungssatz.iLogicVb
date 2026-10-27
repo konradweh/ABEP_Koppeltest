@@ -1,0 +1,22 @@
+﻿Dim quelle As String = "C:\Users\kw\Documents\ABEP_Koppeltest\CAD\RF-Neutralisator\RFN_Zeichnungen\IDW"
+Dim ziel As String = "C:\Temp\DXF_Export\"
+System.IO.Directory.CreateDirectory(ziel)
+
+Dim files() As String = System.IO.Directory.GetFiles(quelle, "*.idw")
+Array.Sort(files)
+
+Dim ok As Integer = 0
+Dim log As String = ""
+For Each f As String In files
+    Dim name As String = System.IO.Path.GetFileNameWithoutExtension(f)
+    Dim d As DrawingDocument = ThisApplication.Documents.Open(f, True)
+    Try
+        d.SaveAs(ziel & name & ".dxf", True)   ' True = Kopie speichern
+        ok += 1
+    Catch ex As Exception
+        log &= name & ": " & ex.Message & vbCrLf
+    End Try
+    d.Close(True)
+Next
+
+MessageBox.Show(ok & " von " & files.Length & " exportiert nach " & ziel & vbCrLf & vbCrLf & log)

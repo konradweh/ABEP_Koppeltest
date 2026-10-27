@@ -1,0 +1,34 @@
+﻿Dim quelle As String = "C:\Users\kw\Documents\ABEP_Koppeltest\CAD\RF-Neutralisator\RFN_Zeichnungen\final"
+Dim ziel As String = "C:\Users\kw\Documents\ABEP_Koppeltest\Fertigung\RF-Neutralisator"
+System.IO.Directory.CreateDirectory(ziel)
+
+Dim files() As String = System.IO.Directory.GetFiles(quelle, "*.idw")
+Array.Sort(files)
+
+Dim oPDF As TranslatorAddIn = ThisApplication.ApplicationAddIns.ItemById("{0AC6FD96-2F4D-42CE-8BE0-8AEA580399E4}")
+Dim oContext As TranslationContext = ThisApplication.TransientObjects.CreateTranslationContext
+oContext.Type = IOMechanismEnum.kFileBrowseIOMechanism
+Dim oData As DataMedium = ThisApplication.TransientObjects.CreateDataMedium
+
+Dim ok As Integer = 0
+Dim log As String = ""
+For Each f As String In files
+    Dim name As String = System.IO.Path.GetFileNameWithoutExtension(f)
+    Try
+        Dim d As DrawingDocument = ThisApplication.Documents.Open(f, True)
+        Dim opt As NameValueMap = ThisApplication.TransientObjects.CreateNameValueMap
+        If oPDF.HasSaveCopyAsOptions(d, oContext, opt) Then
+            opt.Value("All_Color_AS_Black") = 1
+            opt.Value("Vector_Resolution") = 400
+            opt.Value("Sheet_Range") = PrintRangeEnum.kPrintAllSheets
+        End If
+        oData.FileName = ziel & name & ".pdf"
+        oPDF.SaveCopyAs(d, oContext, opt, oData)
+        d.Close(True)
+        ok += 1
+    Catch ex As Exception
+        log &= name & ": " & ex.Message & vbCrLf
+    End Try
+Next
+
+MessageBox.Show(ok & " von " & files.Length & " PDFs erstellt in " & ziel & vbCrLf & vbCrLf & log)
