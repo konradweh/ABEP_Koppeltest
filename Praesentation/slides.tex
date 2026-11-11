@@ -27,6 +27,7 @@
 \usepackage{siunitx}
 \sisetup{locale = DE, per-mode=symbol}
 \usepackage{textcomp}
+\usepackage{amsmath}
 % Beamers Standard-Listenabstaende (topsep/itemsep) sind recht grosszuegig --
 % bei mehreren Listen pro Folie fuehrt das schnell zum Ueberlaufen der Folie.
 % enumitem wuerde hier helfen, entfernt aber beamers Aufzaehlungssymbole
@@ -89,7 +90,7 @@
 \newcommand{\hinweis}[1]{{\small\color{grauton} #1}}
 
 % ── Meta ───────────────────────────────────────────────────────────────────
-\newcommand{\vortragsdatum}{15.10.2026}
+\newcommand{\vortragsdatum}{07.11.2026}
 \title{Koppeltest eines luftatmenden Ionentriebwerks}
 \subtitle{RIT-10 (O\textsubscript{2}) und HF-Neutralisator}
 \author{Konrad Wehkamp}
@@ -280,7 +281,7 @@
   \vfill
   \large
   \begin{itemize}
-    \item Weichlot schmilzt bei 183 bis 190\,$^\circ$C, an der Spule muss hartgelötet oder geklemmt werden
+    \item Die Spulenenden werden hartgelötet, Weichlot scheidet bei diesen Temperaturen aus
     \item Viton-Dichtungen sind bei diesen Temperaturen erledigt, PTFE liegt an seiner Dauergrenze
     \item Kupfer verliert oberhalb von 200\,$^\circ$C seine Federhärte, die Wicklung braucht eine mechanische Halterung
     \item Das Quarzglas hat einen Erweichungspunkt von 1600\,$^\circ$C
@@ -309,6 +310,470 @@
     \item Stromstudie von 3 bis 7\,A für die Generatorauslegung
     \item Temperaturabhängige Leitfähigkeit des Kupfers einbauen
   \end{itemize}
+  \vfill
+\end{frame}
+
+% ============================================================
+% Zwischenstand: Frequenzabhaengigkeit der RFN-Spule (2-40 MHz Sweep)
+% Neuer Abschnitt, angehaengt gemaess rfn_praesentation_zwischenstand_gliederung.md,
+% Stand 07.11.2026. Baut auf den vorherigen Simulationsfolien auf (RFN-Spule
+% bei festen 4 MHz), erweitert sie jetzt um die Frequenzabhaengigkeit.
+% ============================================================
+
+\begin{frame}{Auftrag und Frage}
+  \vfill
+  \large
+  Die Frequenz der Spule soll zwischen 2 und 40\,MHz variiert und ihr
+  Einfluss auf die Temperatur betrachtet werden, bei fallendem Spulenstrom
+  mit steigender Frequenz.
+
+  \vspace{0.8em}
+  Die neuen RFGs machen daraus keine akademische Übung, sondern eine
+  Auslegungsfrage: welche der verfügbaren Festfrequenzen soll der RFN
+  bekommen?
+
+  \vspace{0.8em}
+  \small
+  \hinweis{Die Frequenzen sind elektrisch fest vorgegeben. Bisherige Messungen liefen bei 1,3, 1,6 und 2,0\,MHz, also am unteren Rand des neuen Bereichs.}
+  \vfill
+\end{frame}
+
+% ============================================================
+\begin{frame}{Was das Modell ist}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{Im Modell}
+      \begin{itemize}
+        \item Gekoppelt: Magnetfeld, Wärmetransport in Feststoffen, Oberfläche-zu-Oberfläche-Strahlung
+        \item Plasma als Drude-Leitfähigkeit, aus $n_e$, $T_e$, $T_{\text{gas}}$ bei 0,02\,mbar aus den Messdaten
+        \item Metalle über Impedanz-Randbedingungen, eigene Leitfähigkeit je Werkstoff
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{Nicht im Modell}
+      \begin{itemize}
+        \item Keine kapazitive Einkopplung
+        \item Keine Strahlungsbilanz aus OES
+        \item Kein temperaturabhängiger Plasmazustand
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Die Leistungskette}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \small
+      \begin{align*}
+        P_{\text{ohm}}  &= (1-\eta_k)\,P_{\text{in}} & \text{ohmscher Rest im Metall}\\[0.3em]
+        P_{\text{wand}} &= \eta_k\, f_{\text{wand}}\, P_{\text{in}} & \text{auf die Glasinnenwand}\\[0.3em]
+        I_{\text{Spule}} &= I_{\text{ref}}\sqrt{P_{\text{ohm}}/P_{\text{met,ref}}} & \text{Spulenstrom}
+      \end{align*}
+      \vspace{0.3em}
+      $\eta_k$ ist der Kopplungsgrad, also der Anteil der Spulenleistung,
+      der im Plasma landet. $f_{\text{wand}} = 0{,}22$ ist der Anteil der
+      Plasmaleistung, der an der Glaswand ankommt statt mit den Elektronen
+      abzufließen. $P_{\text{in}} = 150$\,W ist der Auslegungsfall,
+      $I_{\text{ref}} = 5$\,A Amplitude der Referenzstrom, bei dem
+      $P_{\text{met,ref}}$ bestimmt wurde.
+
+      \vspace{0.3em}
+      Die dritte Zeile erklärt, warum der Strom mit der Frequenz fällt:
+      bei besserer Kopplung braucht es weniger Strom für dieselbe
+      eingekoppelte Leistung.
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{img/abb03_spulenstrom.pdf}
+    \end{column}
+  \end{columns}
+  \vspace{0.5em}
+  \begin{alertblock}{Die unangenehmste Falle}
+    $P_{\text{met,ref}}$ ist selbst frequenzabhängig und muss bei jedem Frequenz- und jedem Geometriewechsel neu bestimmt werden.
+  \end{alertblock}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Ergebnis: Kopplungsgrad über der Frequenz}
+  \begin{columns}[T]
+    \begin{column}{0.46\textwidth}
+      \small
+      Acht direkt gerechnete Punkte, keine Interpolation, bei den
+      physikalisch zusammengehörigen Paaren aus Frequenz und
+      Plasmaleitfähigkeit.
+
+      \vspace{0.6em}
+      Der Kopplungsgrad steigt von 75\,\% bei 2\,MHz auf 94\,\% bei
+      13,56\,MHz und fällt darüber wieder.
+
+      \vspace{0.4em}
+      \hinweis{\scriptsize Zahlen für die Aluminium-Variante. Die
+      Edelstahl-Reihe ist mit abgebildet, hat die Schließprobe aber nicht
+      bestanden und gehört ins Edelstahl-Modell.}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{img/abb01_kopplungsgrad.pdf}
+    \end{column}
+  \end{columns}
+  \vspace{0.5em}
+  \begin{alertblock}{Kernaussage}
+    Oberhalb von etwa 10\,MHz ist kaum noch etwas zu gewinnen, weil der Spulenwiderstand durch den Skineffekt schneller wächst als die Einkopplung.
+  \end{alertblock}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Ergebnis: Der ohmsche Rest, sein Minimum, und Aluminium}
+  \begin{columns}[T]
+    \begin{column}{0.44\textwidth}
+      \small
+      Verlust im Metall bei 150\,W: 36,8\,W bei 2\,MHz, 8,7\,W bei
+      13,56\,MHz, wieder 11,0\,W bei 40,68\,MHz. Die markierten Optima
+      liegen bei 15,1\,MHz (Edelstahl) und 17,2\,MHz (Aluminium).
+
+      \vspace{0.4em}
+      Von den verfügbaren Festfrequenzen ist \textbf{13,56\,MHz die
+      beste}. Abstand zu 27,12\,MHz: 8,7 gegen 9,1\,W. Abstand zu den
+      heutigen 2\,MHz: Faktor vier.
+
+      \vspace{0.4em}
+      Aluminium-Unterring statt Edelstahl: 2 bis 3,5 Prozentpunkte mehr
+      Kopplungsgrad, 15 bis 32\,\% weniger Metallverlust.
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{img/abb02_restverlust.pdf}
+    \end{column}
+  \end{columns}
+  \vspace{0.4em}
+  \hinweis{\scriptsize Zur Ehrlichkeit: in der Alu-Variante ist der Träger thermisch als Aluminium gerechnet, elektrisch aber noch als GFK. Ein Lauf mit leitfähigem Träger steht aus und wird den Gewinn etwas schmälern. Die Empfehlung 13,56\,MHz hängt am Querschnitt-Datensatz, siehe übernächste Folie.}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Ergebnis: Das Optimum in geschlossener Form}
+  \vfill
+  Mit $R_{\text{Plasma}} \sim \omega^2\,\mathrm{Re}(\sigma_p)$ und $R_{\text{Spule}} \sim \omega^\alpha$ folgt
+  \[
+    \omega_{\text{opt}} = \nu_m \sqrt{\frac{2-\alpha}{\alpha}}
+  \]
+  \vspace{-0.3em}
+
+  Der Exponent ist nicht angenommen, sondern am Modell gemessen:
+  $\alpha = 0{,}463$ aus der Anpassung von $R_{\text{Cu}}$ über der
+  Frequenz. Damit liefert die Formel 16,6\,MHz gegen 15,1\,MHz aus den
+  acht Rechenpunkten.
+
+  \vspace{0.4em}
+  \small
+  Mit energieabhängiger Stoßfrequenz aus LXCat bleibt das Optimum bei
+  14,5 bis 19\,MHz. Die Formel mit einem festen $\nu$ unterschätzt es um
+  etwa 20 Prozent, trägt als Abschätzung aber weiter.
+
+  \vspace{0.5em}
+  \begin{alertblock}{Was \emph{nicht} in der Formel steht}
+    Weder die Elektronendichte noch die Spulengeometrie noch die absolute Größe der Widerstände. Das Optimum hängt allein von der Stoßfrequenz ab, also gilt $f_{\text{opt}} \propto$ Druck. Ein übertragbares Ergebnis, kein Einzelfallbefund.
+  \end{alertblock}
+  \vfill
+\end{frame}
+
+% ============================================================
+\begin{frame}{Warum die Kurve wieder ansteigt}
+  \begin{columns}[T]
+    \begin{column}{0.42\textwidth}
+      \small
+      Beide Widerstände im Spulenkreis wachsen mit der Frequenz, aber
+      unterschiedlich schnell.
+
+      \vspace{0.5em}
+      Der eingekoppelte Plasmawiderstand sättigt, sobald
+      $\omega$ die Stoßfrequenz $\nu_m$ überholt. Der Metallwiderstand
+      wächst mit $\omega^{0{,}463}$ ungebremst weiter.
+
+      \vspace{0.5em}
+      Oberhalb von etwa 15\,MHz gewinnt das Metall, und genau dort kippt
+      die Verlust- und Temperaturkurve.
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{img/abb13_widerstaende.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+% LXCat: Der Stossquerschnitt ist jetzt belegt statt geschaetzt.
+% Ergaenzt am 07.11.2026 aus rfn_lxcat_stossquerschnitte_ergebnis.md.
+% ============================================================
+\begin{frame}{Stoßquerschnitt aus LXCat statt geschätzt}
+  \centering
+  \includegraphics[height=5.5cm]{img/abb_C_fopt_datensaetze.pdf}
+
+  \vspace{0.2em}
+  \raggedright
+  \footnotesize
+  Acht Datenbanken, gemittelt über eine Maxwell-Verteilung bei
+  $T_e = 4{,}5$\,eV, getrennt für N$_2$ und O$_2$. Von dem Faktor zwei, den
+  ich als Korrektur erwartet hatte, ist nichts zu sehen. Was sich ändert,
+  ist die Spanne: von 10 bis 40\,MHz auf etwa 15 bis 20\,MHz. Der bisherige
+  Wert von 15,7\,MHz liegt mittendrin.
+\end{frame}
+
+% ============================================================
+\begin{frame}{Das Optimum ist flach, 13,56 und 27,12\,MHz liegen nah}
+  \centering
+  \includegraphics[height=5.2cm]{img/abb_B_optimum_kurve.pdf}
+
+  \vspace{0.2em}
+  \raggedright
+  \footnotesize
+  $R_{\text{ind}}/R_{\text{Spule}}$ bei 13,56 gegen 27,12\,MHz: 0,998 gegen
+  0,89 mit dem elastischen Querschnitt, aber 0,96 gegen 0,96 mit dem
+  effektiven. Die Empfehlung trägt trotzdem, über die Thermik: 267 gegen
+  278\,$^\circ$C bei 150\,W, dazu die kapazitive Einkopplung, die mit der
+  Frequenz zunimmt.
+\end{frame}
+
+% ============================================================
+\begin{frame}{Ergebnis: Wo die Verluste sitzen}
+  \begin{columns}[T]
+    \begin{column}{0.44\textwidth}
+      \small
+      Bei 4\,MHz trägt das Kupfer 62\,\%, der Edelstahlring 30\,\%,
+      Klemmring und Abdeckblech zusammen 8\,\%.
+
+      \vspace{0.5em}
+      Bei 40,68\,MHz ist der Edelstahlring allein bei 45\,\%.
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{img/abb05_verlustaufteilung.pdf}
+    \end{column}
+  \end{columns}
+  \vspace{0.5em}
+  \begin{alertblock}{Konstruktionshebel}
+    Der Unterring ist das zweitwichtigste Bauteil im Verlusthaushalt, und je höher die Frequenz, desto mehr.
+  \end{alertblock}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Thermik: der verifizierte Betriebspunkt}
+  \footnotesize
+  \begin{columns}[T]
+    \begin{column}{0.46\textwidth}
+      Erster vollständig verifizierter Betriebspunkt: 4\,MHz, 150\,W, Weg\,B.
+      \vspace{0.3em}
+      \begin{tabular}{@{}L{2.4cm}L{1.3cm}L{1.3cm}@{}}
+        \toprule
+        \textbf{Bauteil} & \textbf{Max} & \textbf{Mittel} \\
+        \midrule
+        Spule & 342\,$^\circ$C & 330\,$^\circ$C \\
+        Glas & 272\,$^\circ$C & 203\,$^\circ$C \\
+        Ring oben & 145\,$^\circ$C & 122\,$^\circ$C \\
+        Dichtring & 96\,$^\circ$C & 60\,$^\circ$C \\
+        Kontakt Frontplatte & \multicolumn{2}{l}{35 bis 43\,$^\circ$C} \\
+        \bottomrule
+      \end{tabular}
+      \vspace{0.5em}
+      \textbf{Energiebilanz.} 47,1\,W hinein, davon 36,5\,W über die Konvektion am Unterring hinaus und knapp 11\,W über Strahlung.
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{img/abb06_temperaturen.pdf}
+    \end{column}
+  \end{columns}
+  \vspace{0.3em}
+  \begin{alertblock}{Die eine Aussage, die hängen bleiben soll}
+    Die Spule ist mit 342\,$^\circ$C mit Abstand das heißeste Bauteil, alles mit Kontakt zur Frontplatte bleibt unter 45\,$^\circ$C. Der Grund ist der fehlende Wärmepfad: die Spule hat außer den beiden SHV-Stiften und der Strahlung keinen Weg nach draußen.
+  \end{alertblock}
+\end{frame}
+
+% ============================================================
+% Hauptbild der Praesentation: die Temperaturreihe ueber der Frequenz.
+% ============================================================
+\begin{frame}{Temperaturen über der Frequenz}
+  \begin{columns}[T]
+    \begin{column}{0.42\textwidth}
+      \small
+      Die Spulentemperatur folgt dem Restverlust, weil die Spule außer
+      zwei SHV-Stiften und der Strahlung keinen Wärmepfad hat.
+
+      \vspace{0.5em}
+      Bei 150\,W fällt sie von \textbf{445\,$^\circ$C} bei 2\,MHz auf
+      \textbf{267\,$^\circ$C} bei 13,56\,MHz und steigt dann wieder auf
+      303\,$^\circ$C bei 40,68\,MHz.
+
+      \vspace{0.5em}
+      Das Glas bleibt ab etwa 4\,MHz nahezu konstant bei 266 bis
+      272\,$^\circ$C, weil seine Last über $f_{\text{wand}}$ an der
+      Plasmaleistung hängt und nicht am Metallverlust.
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{img/abb10_temperatur_ueber_frequenz.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Betriebskarte: Temperatur über dem Strom}
+  \begin{columns}[T]
+    \begin{column}{0.40\textwidth}
+      \small
+      Dieselben Daten in der Form, in der die Betreuerin sie sehen
+      wollte: Spulentemperatur über dem Spulenstrom.
+
+      \vspace{0.5em}
+      Farbig je feste Frequenz, grau je feste Leistung. Beide
+      Leserichtungen in einem Bild.
+
+      \vspace{0.5em}
+      Bei gleichem Strom ist die höhere Frequenz die heißere, weil der
+      Wechselstromwiderstand mitwächst. Bei gleicher \emph{Leistung} ist
+      sie die kühlere, und das ist der Fall, der zählt.
+    \end{column}
+    \begin{column}{0.56\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{img/abb14_betriebskarte.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Gegenprobe: Regelung auf Plasmaleistung}
+  \begin{columns}[T]
+    \begin{column}{0.42\textwidth}
+      \small
+      Ein naheliegender Einwand: das Optimum könnte ein Artefakt der
+      Regelstrategie sein, weil oben die Spulenleistung festgehalten
+      wurde.
+
+      \vspace{0.5em}
+      Hält man stattdessen die \emph{Plasmaleistung} fest, bleibt das
+      Optimum, wo es ist.
+
+      \vspace{0.5em}
+      Es hängt am Verhältnis der beiden Widerstände und nicht daran,
+      welche Größe der Generator konstant hält.
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{img/abb15_regelung_plasmaleistung.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Wie belastbar das ist}
+  \begin{columns}[T]
+    \begin{column}{0.56\textwidth}
+      \footnotesize
+      Zwei unabhängige Proben laufen in jeder Sweepzeile mit.
+
+      \vspace{0.4em}
+      \textbf{Schließprobe.} $P_{\text{Cu}} + P_{\text{Ränder}}$ gegen
+      $P_{\text{ohm}}$. Über alle 33 gültigen Zeilen ist der größte
+      Fehler 0,034\,\%.
+
+      \vspace{0.4em}
+      \textbf{Bilanzprobe.} $P_{\text{Plasma}} + P_{\text{Cu}} +
+      P_{\text{Ränder}}$ gegen $P_{\text{in}}$. Größter Fehler 0,058\,\%.
+
+      \vspace{0.4em}
+      Daraus folgt der aus der Feldlösung zurückgerechnete Kopplungsgrad,
+      und er trifft den vorgegebenen in allen acht Frequenzpunkten auf
+      vier bis fünf Stellen. Bei 4\,MHz: vorgegeben 0,88000, gemessen
+      0,87999.
+
+      \vspace{0.4em}
+      \textbf{Weiter.} Netzstudie mit Richardson-Extrapolation über zwei
+      Stufen, Proximity-Faktor $2{,}28 \pm 0{,}05$. Induktivität
+      1,47\,µH. Validierungspunkt ist die gemessene Blende bei
+      150\,$^\circ$C und 23,2\,W Spulenleistung.
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{img/abb09_spulenwiderstand.pdf}\\[0.3em]
+      \hinweis{\scriptsize Die fünf Punkte bei 150\,W kommen im Sweep
+      doppelt vor, einmal im Frequenzblock und einmal am oberen Ende der
+      Leistungsleiter. Die Werte sind identisch.}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Unsicherheiten, offen und ehrlich}
+  \footnotesize
+  \begin{itemize}
+    \item $h_{\text{anb}}$, der Kontaktleitwert vom Unterring zur Frontplatte, ist mit 2000\,W/(m²K) angesetzt und nicht gemessen. Größte Einzelunsicherheit im Thermikmodell, betrifft die Spule aber am wenigsten. Behebbar mit zwei Thermoelementen.
+    \item $f_{\text{wand}} = 0{,}22$ ist eine Worst-Case-Annahme ohne Strahlungsbilanz. Betrifft vor allem das Glas, kaum die Spule.
+    \item \textbf{$\sigma_p$ ist über die Leistungsleiter konstant gehalten.} In Wirklichkeit wächst die Elektronendichte mit der absorbierten Leistung. Bei kleiner Leistung ist der Plasmawiderstand deshalb kleiner als modelliert, der nötige Strom größer und die Spule heißer. Die zulässigen Leistungen sind also eher optimistisch.
+    \item Der Stoßquerschnitt stammt jetzt aus LXCat und ist über eine Maxwell-Verteilung bei 4,5\,eV gemittelt, getrennt für N$_2$ und O$_2$. Je nach Datensatz liegt das Optimum für Luft zwischen 14,5 und 19\,MHz. Offen ist, ob die Elektronen bei 0,02\,mbar tatsächlich maxwellverteilt sind.
+    \item Kapazitive Einkopplung ist nicht modelliert und spielt bei den hohen Frequenzen eine Rolle.
+    \item Die \textbf{Ist-Zustand-Reihe mit Edelstahlring} ist in der aktuellen Modelldatei nicht bestätigt. Alle gezeigten Zahlen gelten für die Aluminium-Variante.
+  \end{itemize}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Was noch in Prüfung ist, und was ich zurückziehe}
+  \vfill
+  \begin{block}{In Prüfung}
+    \small
+    Im Modell dissipiert eine numerische Eichregularisierung im Vakuum
+    das Sechs- bis Sechsundvierzigfache der physikalischen Leistung. Sie
+    geht nachweislich nicht in die Thermik ein und verfälscht die
+    Teilleistungen nicht. Offen ist, ob sie bei den höchsten Frequenzen
+    das Feld beeinflusst. Ein Test läuft. Falls er anschlägt, betrifft
+    das nur den Ast oberhalb von etwa 20\,MHz, nicht die Lage des
+    Optimums und nicht die Empfehlung.
+  \end{block}
+  \vspace{0.5em}
+  \begin{alertblock}{Zurückgezogen}
+    \small
+    Alle Aussagen, die aus der Gesamtimpedanz des Spulenkreises folgen:
+    Spulenspannung, Gesamtwiderstand und die früher genannte
+    vorhergesagte Eigenresonanz zwischen 29 und 40\,MHz. Die
+    Teilleistungen und damit alles oben Gezeigte sind davon nicht
+    betroffen.
+  \end{alertblock}
+  \vfill
+\end{frame}
+
+% ============================================================
+\begin{frame}{Nächste Schritte und Fragen}
+  \footnotesize
+  \textbf{Von mir}
+  \begin{itemize}
+    \item Den Test zur Eichregularisierung abschließen
+    \item 13,56 und 27,12\,MHz mit den neuen $\sigma_p$-Werten nachrechnen, zwei Läufe zu je sieben Minuten
+    \item Die Ist-Zustand-Reihe im Edelstahl-Modell nachziehen, damit sie die Schließprobe besteht
+    \item Ein EM-Lauf mit elektrisch leitfähigem Träger
+  \end{itemize}
+  \vspace{0.4em}
+  \begin{block}{Fragen an die Betreuerin}
+    \scriptsize
+    \begin{enumerate}
+      \item Die genauen Festfrequenzen der neu beschafften RFGs. Gerechnet mit 13,56, 27,12 und 40,68\,MHz als ISM-Bänder, bestätigt ist das nicht.
+      \item Der nominelle Betriebsdruck des RFN. Das Optimum ist proportional zum Druck, die Empfehlung hängt direkt daran.
+      \item Die Gaszusammensetzung im Betrieb, reine Luft oder Zumischungen. Gerechnet ist 79/21, gemessen wurde nur in N$_2$.
+      \item Gibt es OES-Daten für eine Strahlungsbilanz und damit ein besseres $f_{\text{wand}}$? Und die Plasmadaten als Tabelle statt aus den Abbildungen abgelesen?
+      \item Soll die Aluminium-Variante gebaut werden? Davon hängt ab, welche der beiden Reihen die Hauptreihe der Arbeit wird.
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Roter Faden}
+  \vfill
+  \begin{block}{In einem Satz}
+    \large
+    Die Kopplung wird mit der Frequenz besser, der Spulenwiderstand aber
+    auch schlechter, und das Optimum dieser beiden Effekte liegt bei etwa
+    15\,MHz, also praktisch bei 13,56\,MHz. Das senkt die
+    Spulentemperatur bei 150\,W von 445 auf 267\,$^\circ$C. Der Engpass
+    bleibt die Spule selbst, weil sie außer den SHV-Stiften und der
+    Strahlung keinen Wärmepfad hat.
+  \end{block}
   \vfill
 \end{frame}
 
