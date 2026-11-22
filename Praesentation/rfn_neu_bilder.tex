@@ -53,6 +53,10 @@
 
 \newcommand{\hinweis}[1]{{\small\color{grauton} #1}}
 
+% Einheitliche Spaltenbreiten fuer alle Bildfolien.
+\newcommand{\bildspalte}{0.54\textwidth}
+\newcommand{\textspalte}{0.44\textwidth}
+
 % Bild mit Platzhalter, falls die Datei noch nicht exportiert ist.
 % #1 Dateiname (ohne Pfad), #2 Hoehe, #3 Platzhaltertext
 \newcommand{\rfnbild}[3]{%
@@ -110,44 +114,43 @@
 \end{frame}
 
 % ============================================================
-\begin{frame}{Gesamtaufbau}
+\begin{frame}[c]{Gesamtaufbau}
   \centering
-  \rfnbild{01_gesamtschnitt.png}{6.0cm}{}
+  \rfnbild{01_gesamtschnitt.png}{5.9cm}{}
 
+  \vspace{0.4em}
   \hinweis{Schnittbild: Links Blendenhalterung, rechts Glasanpressung.}
 \end{frame}
 
 % ============================================================
-\begin{frame}{Spule und Spulenstäbe}
-  \begin{columns}[T]
-    \begin{column}{0.62\textwidth}
-      \vspace{0.5cm}
+\begin{frame}[c]{Spule und Spulenstäbe}
+  \begin{columns}[c]
+    \begin{column}{\bildspalte}
       \centering
-      \rfnbild{02_spule_spulenstaebe.png}{6.0cm}{Halbschnitt durch Spule und Spulenstäbe}
+      \rfnbild{02_spule_spulenstaebe.png}{5.9cm}{Halbschnitt durch Spule und Spulenstäbe}
     \end{column}
-    \begin{column}{0.35\textwidth}
-      \vspace{0.5cm}
+    \begin{column}{\textspalte}
       \begin{itemize}
         \item Spule außen, Spulenstäbe innen am Glasgefäß
-        \item Spulenstäbe aus Glimmerlaminat, jetzt dickere Variante --> Spule weiter von Glasgefäß entferntq
+        \item Spulenstäbe aus Glimmerlaminat, jetzt dickere Variante $\rightarrow$ Spule weiter von Glasgefäß entfernt
         \item Spule mit Abstand zu GFK-Ring, tiefer über Glasgefäß als bisher
         \item Aussparung für Spulenanschluss im GFK-Ring
       \end{itemize}
-      \vspace{0.6em}
     \end{column}
   \end{columns}
 \end{frame}
 
 % ============================================================
-\begin{frame}{Glasanpressung mit Federschraube}
-  \begin{columns}[T]
-    \begin{column}{0.56\textwidth}
-      \vspace{0.5cm}
+% Ausnahme: diese Folie hat die meisten Stichpunkte, daher breitere Textspalte.
+% Das Bild ist quadratisch und wird dadurch nicht kleiner.
+\begin{frame}[c]{Glasanpressung mit Federschraube}
+  \begin{columns}[c]
+    \begin{column}{0.48\textwidth}
       \centering
-      \rfnbild{03_federschraube.png}{6.0cm}{Detail Federschraube, Feder, Hülse, Glimmerscheibe}
+      \rfnbild{03_federschraube.png}{5.9cm}{Detail Federschraube, Feder, Hülse, Glimmerscheibe}
     \end{column}
-    \begin{column}{0.41\textwidth}
-      \vspace{0.5cm}
+    \begin{column}{0.50\textwidth}
+      \small
       \begin{itemize}
         \item Feder in GFK-Ring: definierte Anpresskraft durch Schraube in Unterring
         \item Hülse begrenzt den Federweg, unabhängig vom Anzugsmoment, definierter Anpressdruck
@@ -155,42 +158,38 @@
         \item Festigkeit der GFK-Lippe ausreichend, Rundung gegen entlaminieren
         \item Aussparung in Lippe für vertikale Kraftrichtung
       \end{itemize}
-      \vspace{0.6em}
-      \hinweis{Schrauben schauen 4.3 mm aus GFK-Ring heraus; keine Kollisionen.}
+      \vspace{0.4em}
+      {\footnotesize\color{grauton} Schrauben schauen 4,3\,mm aus GFK-Ring heraus; keine Kollisionen.\par}
     \end{column}
   \end{columns}
 \end{frame}
 
 % ============================================================
-\begin{frame}{Kontaktbolzen}
-  \begin{columns}[T]
-    \begin{column}{0.56\textwidth}
-      \vspace{0.5cm}
+\begin{frame}[c]{Kontaktbolzen}
+  \begin{columns}[c]
+    \begin{column}{\bildspalte}
       \centering
-      \rfnbild{04_kontaktbolzen.png}{6.0cm}{Detail Kontaktbolzen in der Keramikhülse}
+      \rfnbild{04_kontaktbolzen.png}{5.9cm}{Detail Kontaktbolzen in der Keramikhülse}
     \end{column}
-    \begin{column}{0.41\textwidth}
-      \vspace{1.4cm}
+    \begin{column}{\textspalte}
       \begin{itemize}
         \item Kontaktierung von oben, nicht von der Austrittsseite
         \item Keramikhülse führt den Bolzen isoliert durch Unterring
       \end{itemize}
-      \vspace{0.6em}
+      \vspace{0.5em}
       \hinweis{Bolzen in Klemmring verschraubt, indirekte Blendenkontaktierung.}
     \end{column}
   \end{columns}
 \end{frame}
 
 % ============================================================
-\begin{frame}{Blendenbefestigung}
-  \begin{columns}[T]
-    \begin{column}{0.56\textwidth}
-      \vspace{0.5cm}
+\begin{frame}[c]{Blendenbefestigung}
+  \begin{columns}[c]
+    \begin{column}{\bildspalte}
       \centering
-      \rfnbild{05_blendenschraube.png}{6.0cm}{Detail Unterring, Blendenschraube, Isolierhülse}
+      \rfnbild{05_blendenschraube.png}{5.9cm}{Detail Unterring, Blendenschraube, Isolierhülse}
     \end{column}
-    \begin{column}{0.41\textwidth}
-      \vspace{1.2cm}
+    \begin{column}{\textspalte}
       \begin{itemize}
         \item Blende von unten wechselbar, angedrückt durch Klemmring
         \item Schraube auf Blendenpotential, Hülse isoliert von Unterring
@@ -206,15 +205,13 @@
 % ============================================================
 % HINWEIS: img/halterung.png ist ein aelterer Export (zeigt noch den alten RFN).
 % Bei Gelegenheit durch ein aktuelles Rendering ersetzen.
-\begin{frame}{Aufhängung: Aufbau}
-  \begin{columns}[T]
-    \begin{column}{0.56\textwidth}
-      \vspace{0.3cm}
+\begin{frame}[c]{Aufhängung: Aufbau}
+  \begin{columns}[c]
+    \begin{column}{\bildspalte}
       \centering
-      \includegraphics[height=5.8cm,width=\linewidth,keepaspectratio]{img/halterung.png}
+      \includegraphics[height=5.9cm,width=\linewidth,keepaspectratio]{img/halterung.png}
     \end{column}
-    \begin{column}{0.41\textwidth}
-      \vspace{0.5cm}
+    \begin{column}{\textspalte}
       \begin{itemize}
         \item Unterteil und RIT-Erhöhung auf gemeinsamer Teflonplatte
         \item Achshöhe RFN und RIT gleich, \SI{158}{\milli\meter} über der Platte
@@ -227,16 +224,15 @@
 \end{frame}
 
 % ============================================================
-\begin{frame}{Drehbarkeit: Stift, Skala, Klemmung}
-  \begin{columns}[T]
-    \begin{column}{0.54\textwidth}
-      \vspace{0.2cm}
+\begin{frame}[c]{Drehbarkeit: Stift, Skala, Klemmung}
+  \begin{columns}[c]
+    \begin{column}{\bildspalte}
       \centering
-      \includegraphics[height=5.9cm,trim=36 207 523.4 72,clip,page=2]%
+      \includegraphics[height=5.9cm,width=\linewidth,keepaspectratio,%
+                       trim=36 207 523.4 72,clip,page=2]%
         {img/RFN_neu/aufhaengung_zeichnungen.pdf}
     \end{column}
-    \begin{column}{0.43\textwidth}
-      \vspace{0.4cm}
+    \begin{column}{\textspalte}
       \begin{itemize}
         \item Drehscheibe dreht auf eingepresstem Zylinderstift \o\,5, Gleitsitz E8 auf m6
         \item Skala im Unterteil von 80\textdegree\ bis 180\textdegree, Teilung 5\textdegree, Zusatzstrich bei 135\textdegree
@@ -249,16 +245,15 @@
 \end{frame}
 
 % ============================================================
-\begin{frame}{RFN an der Frontplatte}
-  \begin{columns}[T]
-    \begin{column}{0.54\textwidth}
-      \vspace{0.2cm}
+\begin{frame}[c]{RFN an der Frontplatte}
+  \begin{columns}[c]
+    \begin{column}{\bildspalte}
       \centering
-      \includegraphics[height=5.6cm,trim=36 390.7 662.5 57.6,clip,page=4]%
+      \includegraphics[height=5.9cm,width=\linewidth,keepaspectratio,%
+                       trim=36 390.7 662.5 57.6,clip,page=4]%
         {img/RFN_neu/aufhaengung_zeichnungen.pdf}
     \end{column}
-    \begin{column}{0.43\textwidth}
-      \vspace{0.6cm}
+    \begin{column}{\textspalte}
       \begin{itemize}
         \item Unterring \o\,80 g6 zentriert in \o\,80 H7 der Frontplatte
         \item Eingepresster Stift \o\,2 bei 140\textdegree\ gibt die Drehlage vor
