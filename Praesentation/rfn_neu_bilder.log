@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.26)  22 NOV 2026 19:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.26)  22 NOV 2026 22:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1251,146 +1251,137 @@ al/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc} <./img/JLU_Giessen-Logo.pdf>]
  [2
 
 ]
-<img/RFN_neu/01_gesamtschnitt.png, id=33, 1601.985pt x 2409.0pt>
+<img/RFN_neu/01_gesamtschnitt.png, id=33, 685.56125pt x 1037.8775pt>
 File: img/RFN_neu/01_gesamtschnitt.png Graphic file (type png)
 <use img/RFN_neu/01_gesamtschnitt.png>
 Package pdftex.def Info: img/RFN_neu/01_gesamtschnitt.png  used on input line 1
-99.
-(pdftex.def)             Requested size: 113.51929pt x 170.70569pt.
+94.
+(pdftex.def)             Requested size: 112.75705pt x 170.70395pt.
 
 [3
 
  <./img/RFN_neu/01_gesamtschnitt.png (PNG copy)>]
-<img/RFN_neu/06_blende_detail.png, id=39, 2007.5pt x 1826.825pt>
-File: img/RFN_neu/06_blende_detail.png Graphic file (type png)
-<use img/RFN_neu/06_blende_detail.png>
-Package pdftex.def Info: img/RFN_neu/06_blende_detail.png  used on input line 2
-23.
-(pdftex.def)             Requested size: 175.0922pt x 159.3339pt.
- [4
-
- <./img/RFN_neu/06_blende_detail.png (PNG copy)>]
-<img/RFN_neu/02_spule_spulenstaebe.png, id=45, 1214.5375pt x 909.3975pt>
+<img/RFN_neu/02_spule_spulenstaebe.png, id=39, 1765.59625pt x 1163.34625pt>
 File: img/RFN_neu/02_spule_spulenstaebe.png Graphic file (type png)
 <use img/RFN_neu/02_spule_spulenstaebe.png>
 Package pdftex.def Info: img/RFN_neu/02_spule_spulenstaebe.png  used on input l
-ine 246.
-(pdftex.def)             Requested size: 215.08617pt x 161.04799pt.
+ine 218.
+(pdftex.def)             Requested size: 215.0953pt x 141.72566pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-246.
+218.
 
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-46.
+18.
 
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-246.
+218.
 
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-246.
+218.
 
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 246.
+(Font)              <10> on input line 218.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 246.
+(Font)              <7> on input line 218.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 246.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 246
+(Font)              <5> on input line 218.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 218
 .
 
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 246
+LaTeX Font Info:    Trying to load font information for U+msb on input line 218
 .
 
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 246.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 218.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 246.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 218.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 246.
- [5
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 218.
+ [4
 
 {C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <.
 /img/RFN_neu/02_spule_spulenstaebe.png (PNG copy)>]
-<img/RFN_neu/03_federschraube.png, id=52, 2409.0pt x 2409.0pt>
+<img/RFN_neu/03_federschraube.png, id=46, 1304.875pt x 1163.34625pt>
 File: img/RFN_neu/03_federschraube.png Graphic file (type png)
 <use img/RFN_neu/03_federschraube.png>
 Package pdftex.def Info: img/RFN_neu/03_federschraube.png  used on input line 2
-70.
-(pdftex.def)             Requested size: 167.83855pt x 167.83855pt.
- [6
+47.
+(pdftex.def)             Requested size: 178.71901pt x 159.33487pt.
+ [5
 
  <./img/RFN_neu/03_federschraube.png (PNG copy)>]
-<img/RFN_neu/04_kontaktbolzen.png, id=58, 1053.9375pt x 851.18pt>
+<img/RFN_neu/04_kontaktbolzen.png, id=52, 1053.9375pt x 851.18pt>
 File: img/RFN_neu/04_kontaktbolzen.png Graphic file (type png)
 <use img/RFN_neu/04_kontaktbolzen.png>
 Package pdftex.def Info: img/RFN_neu/04_kontaktbolzen.png  used on input line 2
-88.
-(pdftex.def)             Requested size: 207.85689pt x 167.86917pt.
- [7
+67.
+(pdftex.def)             Requested size: 197.29115pt x 159.33609pt.
+ [6
 
  <./img/RFN_neu/04_kontaktbolzen.png (PNG copy)>]
-<img/RFN_neu/05_blendenschraube.png, id=65, 2409.0pt x 1805.74625pt>
-File: img/RFN_neu/05_blendenschraube.png Graphic file (type png)
-<use img/RFN_neu/05_blendenschraube.png>
-Package pdftex.def Info: img/RFN_neu/05_blendenschraube.png  used on input line
- 306.
-(pdftex.def)             Requested size: 215.073pt x 161.21513pt.
- [8
+<img/RFN_neu/06_blende_detail.png, id=58, 2208.25pt x 2086.79625pt>
+File: img/RFN_neu/06_blende_detail.png Graphic file (type png)
+<use img/RFN_neu/06_blende_detail.png>
+Package pdftex.def Info: img/RFN_neu/06_blende_detail.png  used on input line 2
+97.
+(pdftex.def)             Requested size: 168.57677pt x 159.30505pt.
+ [7
 
- <./img/RFN_neu/05_blendenschraube.png (PNG copy)>]
-<img/halterung.png, id=71, 916.92563pt x 816.80156pt>
+ <./img/RFN_neu/06_blende_detail.png (PNG copy)>]
+<img/halterung.png, id=65, 916.92563pt x 816.80156pt>
 File: img/halterung.png Graphic file (type png)
 <use img/halterung.png>
-Package pdftex.def Info: img/halterung.png  used on input line 329.
+Package pdftex.def Info: img/halterung.png  used on input line 320.
 (pdftex.def)             Requested size: 188.44667pt x 167.86916pt.
- [9
+ [8
 
 {C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc} <.
 /img/halterung.png>]
-<img/RFN_neu/aufhaengung_zeichnungen.pdf, id=80, page=2, 1195.0156pt x 845.0468
+<img/RFN_neu/aufhaengung_zeichnungen.pdf, id=74, page=2, 1195.0156pt x 845.0468
 6pt>
 File: img/RFN_neu/aufhaengung_zeichnungen.pdf Graphic file (type pdf)
 <use img/RFN_neu/aufhaengung_zeichnungen.pdf, page 2>
 Package pdftex.def Info: img/RFN_neu/aufhaengung_zeichnungen.pdf , page2 used o
-n input line 350.
+n input line 341.
 (pdftex.def)             Requested size: 188.22942pt x 167.87187pt.
- [10
+ [9
 
  <./img/RFN_neu/aufhaengung_zeichnungen.pdf>]
-<img/RFN_neu/aufhaengung_zeichnungen.pdf, id=94, page=4, 1195.0156pt x 845.0468
+<img/RFN_neu/aufhaengung_zeichnungen.pdf, id=88, page=4, 1195.0156pt x 845.0468
 6pt>
 File: img/RFN_neu/aufhaengung_zeichnungen.pdf Graphic file (type pdf)
 <use img/RFN_neu/aufhaengung_zeichnungen.pdf, page 4>
 Package pdftex.def Info: img/RFN_neu/aufhaengung_zeichnungen.pdf , page4 used o
-n input line 370.
+n input line 361.
 (pdftex.def)             Requested size: 209.86095pt x 167.8671pt.
- [11
+ [10
 
- <./img/RFN_neu/aufhaengung_zeichnungen.pdf>] [12
+ <./img/RFN_neu/aufhaengung_zeichnungen.pdf>] [11
 
 ]
 File: img/JLU_Giessen-Logo.pdf Graphic file (type pdf)
 <use img/JLU_Giessen-Logo.pdf>
-Package pdftex.def Info: img/JLU_Giessen-Logo.pdf  used on input line 399.
+Package pdftex.def Info: img/JLU_Giessen-Logo.pdf  used on input line 390.
 (pdftex.def)             Requested size: 78.58356pt x 28.45274pt.
- [13
+ [12
 
 ]
 \tf@nav=\write6
@@ -1411,10 +1402,10 @@ Package rerunfilecheck Info: File `rfn_neu_bilder.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32178 strings out of 467509
- 699221 string characters out of 5410238
+ 32195 strings out of 467509
+ 699372 string characters out of 5410238
  1053203 words of memory out of 5000000
- 60787 multiletter control sequences out of 15000+600000
+ 60806 multiletter control sequences out of 15000+600000
  685613 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,13n,123p,1883b,1166s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1425,9 +1416,9 @@ rs/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/k
 w/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/kw/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/kw/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on rfn_neu_bilder.pdf (13 pages, 3786389 bytes).
+Output written on rfn_neu_bilder.pdf (12 pages, 1240675 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 157 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 100 words of extra memory for PDF output out of 10000 (max. 10000000)
 
