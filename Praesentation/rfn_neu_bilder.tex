@@ -76,6 +76,23 @@
 % Dadurch bleiben die Anmerkungen beim Skalieren an ihrem Platz.
 % Achtung: Die Koordinaten gelten nur fuer genau dieses Bild. Wird ein Bild
 % ausgetauscht, muessen seine Anmerkungen neu gesetzt werden.
+%
+% Koordinaten ablesen:
+%   python tools/bildraster.py img/RFN_neu/01_gesamtschnitt.png
+% legt das Raster sichtbar ueber das Bild (raster_01_gesamtschnitt.png).
+% Fuer enge Stellen ein Ausschnitt, Reihenfolge x-links y-unten x-rechts y-oben:
+%   python tools/bildraster.py img/RFN_neu/06_blende_detail.png 0.1 0.0 0.5 0.4
+%
+% Aufruf:  \anmerkung{Ort des Labels}{Ankerseite}{Ziel des Pfeils}{Text}
+%   Ort       wo das Label steht. Werte < 0 oder > 1 legen es neben das Bild.
+%   Ankerseite welche Seite des Labels am Ort klebt: east west north south.
+%              east = Label steht links vom Ort, west = rechts davon.
+%   Ziel      wohin die Pfeilspitze zeigt.
+% Beispiel:  \anmerkung{(-0.15,0.52)}{east}{(0.204,0.222)}{Spule}
+%
+% Pfad einzeichnen (Stil pfad, rot):
+%   \draw[pfad] (x1,y1) -- (x2,y2) -- (x3,y3);
+% Mehrere sich ueberlappende Zuege ergeben mehrere Pfeilspitzen.
 \newcounter{anmnr}
 \tikzset{
   anmerkungtext/.style={font=\scriptsize, color=giessenblau, inner sep=1.4pt,
