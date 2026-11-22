@@ -33,6 +33,7 @@
 \definecolor{hellblau}{RGB}{230,234,240}
 \definecolor{grauton}{RGB}{95,102,110}
 \definecolor{hellgrau}{RGB}{236,236,237}
+\definecolor{entlueftungsrot}{RGB}{198,32,32}
 
 \setbeamercolor{palette primary}{bg=giessenblau,fg=white}
 \setbeamercolor{frametitle}{bg=white,fg=giessenblau}
@@ -82,6 +83,11 @@
                         rounded corners=1pt, align=left},
   anmerkungpfeil/.style={giessenblau, line width=0.45pt,
                          -{Stealth[length=3.2pt,width=2.4pt]}},
+  % Stroemungspfad im Bild, z.B. Entlueftung
+  pfad/.style={entlueftungsrot, line width=1.3pt, line cap=round,
+               rounded corners=1.5pt, -{Stealth[length=5pt,width=4pt]}},
+  pfadtext/.style={font=\scriptsize\bfseries, color=entlueftungsrot, inner sep=1.4pt,
+                   fill=white, fill opacity=0.82, text opacity=1, rounded corners=1pt},
 }
 
 % #1 Dateiname (ohne Pfad), #2 Hoehe, #3 Anmerkungen (\anmerkung-Aufrufe)
@@ -163,16 +169,39 @@
     \anmerkung{(-0.15,0.34)}{east}{(0.178,0.074)}{Dichtring}
     \anmerkung{(-0.15,0.25)}{east}{(0.130,0.064)}{Unterring}
     \anmerkung{(-0.15,0.16)}{east}{(0.177,0.037)}{PEEK-Hülse}
-    \anmerkung{(-0.15,0.07)}{east}{(0.184,0.0295)}{Glimmerscheibe}
-    \anmerkung{(-0.15,-0.02)}{east}{(0.196,0.032)}{Blende}
-    \anmerkung{(-0.15,-0.11)}{east}{(0.210,0.024)}{Klemmring}
+    % Glimmerscheibe, Blende und Klemmring liegen hier in einer Schicht von
+    % etwa 0,6 mm Folienhoehe. Sie sind auf der folgenden Detailfolie benannt.
     % rechts
     \anmerkung{(1.15,0.52)}{west}{(0.600,0.185)}{Spulenstäbe}
     \anmerkung{(1.15,0.34)}{west}{(0.906,0.192)}{Kontaktbolzen}
     \anmerkung{(1.15,0.25)}{west}{(0.885,0.166)}{Isolierhülse}
     \anmerkung{(1.15,0.16)}{west}{(0.908,0.1175)}{Federscheiben}
-    \anmerkung{(1.15,0.07)}{west}{(0.902,0.104)}{Distanzhülse}
-    \anmerkung{(1.15,-0.02)}{west}{(0.911,0.100)}{Feder}
+    % Feder und Distanzhuelse liegen 0,3 mm auseinander, daher ein Label.
+    \anmerkung{(1.15,0.06)}{west}{(0.906,0.102)}{Feder und Distanzhülse}
+  }
+\end{frame}
+
+% ============================================================
+% Detail der Blendenbefestigung. Hier ist der Schichtaufbau gross genug,
+% um Glimmerscheibe, Blende und Klemmring einzeln zu benennen.
+% Die Pfeile kommen bewusst aus vier Richtungen.
+\begin{frame}[c]{Blendenbefestigung im Detail}
+  \centering
+  \bildanmerkung{06_blende_detail.png}{5.6cm}{%
+    % Entlueftungspfad: durch den Schlitz zwischen Klemmring und Blende
+    % nach links, dann im Spalt am Unterring nach unten ins Freie.
+    % Zwei sich ueberlappende Zuege, damit beide Schenkel eine Pfeilspitze
+    % bekommen und die Stroemungsrichtung eindeutig ist.
+    \draw[pfad] (0.375,0.1955) -- (0.268,0.1955);
+    \draw[pfad] (0.330,0.1955) -- (0.215,0.1955) -- (0.206,0.055);
+    \node[pfadtext, anchor=north] at (0.206,-0.03) {Entlüftung};
+    % Beschriftungen aus vier Richtungen
+    \anmerkung{(0.50,1.07)}{south}{(0.52,0.78)}{Blendenschraube}
+    \anmerkung{(-0.07,0.74)}{east}{(0.095,0.60)}{Unterring}
+    \anmerkung{(-0.07,0.38)}{east}{(0.250,0.293)}{Glimmerscheibe}
+    \anmerkung{(1.07,0.74)}{west}{(0.755,0.620)}{PEEK-Hülse}
+    \anmerkung{(1.07,0.44)}{west}{(0.880,0.242)}{Blende}
+    \anmerkung{(1.07,0.13)}{west}{(0.850,0.165)}{Klemmring}
   }
 \end{frame}
 
