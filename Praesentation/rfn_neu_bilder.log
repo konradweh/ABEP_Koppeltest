@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.26)  22 NOV 2026 16:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.26)  22 NOV 2026 17:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1043,8 +1043,10 @@ Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 )
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 7
-7.
+\c@anmnr=\count388
+\anmbildbreite=\skip81
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
+15.
 
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1052,31 +1054,31 @@ File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex
 .def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count388
+\l__color_backend_stack_int=\count389
 ) (rfn_neu_bilder.aux
 Package babel Info: 'ngerman' activates 'german' shorthands.
 (babel)             Reported on input line 8.
 )
 \openout1 = `rfn_neu_bilder.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1114,16 +1116,16 @@ LaTeX Font Info:    ... okay on input line 77.
 
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count389
+\scratchcounter=\count390
 \scratchdimen=\dimen331
 \scratchbox=\box95
-\nofMPsegments=\count390
-\nofMParguments=\count391
+\nofMPsegments=\count391
+\nofMParguments=\count392
 \everyMPshowfont=\toks53
-\MPscratchCnt=\count392
+\MPscratchCnt=\count393
 \MPscratchDim=\dimen332
-\MPnumerator=\count393
-\makeMPintoPDFobject=\count394
+\MPnumerator=\count394
+\makeMPintoPDFobject=\count395
 \everyMPtoPDFconversion=\toks54
 )
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base
@@ -1135,57 +1137,57 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 77.
+Package hyperref Info: Link coloring OFF on input line 115.
  (rfn_neu_bilder.out) (rfn_neu_bilder.out)
 \@outlinefile=\write5
 \openout5 = `rfn_neu_bilder.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 77.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 115.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 77.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 115.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 77.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 115.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 77.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 115.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 77.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 77.
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 115.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 115.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 77.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 115.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 77.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 77.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 115.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 115.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 77.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 115.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 77.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 77.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 115.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 115.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 77.
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 115.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 77.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 77.
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 115.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 115.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 77.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 115.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 77.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 115.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 77.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 115.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 77.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 115.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 77.
+(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 115.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 77.
+(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 115.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 77.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 115.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 77.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 115.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 77.
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 115.
 
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-basi
 c-dictionary-English.dict
@@ -1217,7 +1219,7 @@ File: translations-basic-dictionary-german.trsl (german translation file `trans
 lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `german'. on input line 77.
+or `german'. on input line 115.
  (rfn_neu_bilder.nav)
 
 pdfTeX warning: pdflatex.exe (file ./img/JLU_Giessen-Logo.pdf): PDF inclusion: 
@@ -1225,20 +1227,20 @@ found PDF version <1.7>, but at most version <1.5> allowed
 <img/JLU_Giessen-Logo.pdf, id=12, 218.31563pt x 79.04532pt>
 File: img/JLU_Giessen-Logo.pdf Graphic file (type pdf)
 <use img/JLU_Giessen-Logo.pdf>
-Package pdftex.def Info: img/JLU_Giessen-Logo.pdf  used on input line 100.
+Package pdftex.def Info: img/JLU_Giessen-Logo.pdf  used on input line 138.
 (pdftex.def)             Requested size: 78.58356pt x 28.45274pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
  [][][]\T1/lmss/m/n/7 I. Phy-si-ka-li-sches In-sti-tut
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
  []\T1/lmss/m/n/7 AG Io-nen-trieb-wer-ke
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-100.
+138.
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
 File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1
@@ -1253,7 +1255,7 @@ al/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc} <./img/JLU_Giessen-Logo.pdf>]
 File: img/RFN_neu/01_gesamtschnitt.png Graphic file (type png)
 <use img/RFN_neu/01_gesamtschnitt.png>
 Package pdftex.def Info: img/RFN_neu/01_gesamtschnitt.png  used on input line 1
-23.
+61.
 (pdftex.def)             Requested size: 114.18947pt x 167.86473pt.
 
 [3
@@ -1263,56 +1265,56 @@ Package pdftex.def Info: img/RFN_neu/01_gesamtschnitt.png  used on input line 1
 File: img/RFN_neu/02_spule_spulenstaebe.png Graphic file (type png)
 <use img/RFN_neu/02_spule_spulenstaebe.png>
 Package pdftex.def Info: img/RFN_neu/02_spule_spulenstaebe.png  used on input l
-ine 141.
+ine 184.
 (pdftex.def)             Requested size: 215.08617pt x 161.04799pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-141.
+184.
 
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-41.
+84.
 
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-141.
+184.
 
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-141.
+184.
 
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 141.
+(Font)              <10> on input line 184.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 141.
+(Font)              <7> on input line 184.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 141.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 141
+(Font)              <5> on input line 184.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 184
 .
 
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 141
+LaTeX Font Info:    Trying to load font information for U+msb on input line 184
 .
 
 (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 141.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 184.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 141.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 184.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 141.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 184.
  [4
 
 {C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <.
@@ -1320,8 +1322,8 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
 <img/RFN_neu/03_federschraube.png, id=46, 2409.0pt x 2409.0pt>
 File: img/RFN_neu/03_federschraube.png Graphic file (type png)
 <use img/RFN_neu/03_federschraube.png>
-Package pdftex.def Info: img/RFN_neu/03_federschraube.png  used on input line 1
-65.
+Package pdftex.def Info: img/RFN_neu/03_federschraube.png  used on input line 2
+08.
 (pdftex.def)             Requested size: 167.83855pt x 167.83855pt.
  [5
 
@@ -1329,8 +1331,8 @@ Package pdftex.def Info: img/RFN_neu/03_federschraube.png  used on input line 1
 <img/RFN_neu/04_kontaktbolzen.png, id=52, 1053.9375pt x 851.18pt>
 File: img/RFN_neu/04_kontaktbolzen.png Graphic file (type png)
 <use img/RFN_neu/04_kontaktbolzen.png>
-Package pdftex.def Info: img/RFN_neu/04_kontaktbolzen.png  used on input line 1
-83.
+Package pdftex.def Info: img/RFN_neu/04_kontaktbolzen.png  used on input line 2
+26.
 (pdftex.def)             Requested size: 207.85689pt x 167.86917pt.
  [6
 
@@ -1339,7 +1341,7 @@ Package pdftex.def Info: img/RFN_neu/04_kontaktbolzen.png  used on input line 1
 File: img/RFN_neu/05_blendenschraube.png Graphic file (type png)
 <use img/RFN_neu/05_blendenschraube.png>
 Package pdftex.def Info: img/RFN_neu/05_blendenschraube.png  used on input line
- 201.
+ 244.
 (pdftex.def)             Requested size: 215.073pt x 161.21513pt.
  [7
 
@@ -1347,7 +1349,7 @@ Package pdftex.def Info: img/RFN_neu/05_blendenschraube.png  used on input line
 <img/halterung.png, id=65, 916.92563pt x 816.80156pt>
 File: img/halterung.png Graphic file (type png)
 <use img/halterung.png>
-Package pdftex.def Info: img/halterung.png  used on input line 224.
+Package pdftex.def Info: img/halterung.png  used on input line 267.
 (pdftex.def)             Requested size: 188.44667pt x 167.86916pt.
  [8
 
@@ -1358,7 +1360,7 @@ Package pdftex.def Info: img/halterung.png  used on input line 224.
 File: img/RFN_neu/aufhaengung_zeichnungen.pdf Graphic file (type pdf)
 <use img/RFN_neu/aufhaengung_zeichnungen.pdf, page 2>
 Package pdftex.def Info: img/RFN_neu/aufhaengung_zeichnungen.pdf , page2 used o
-n input line 245.
+n input line 288.
 (pdftex.def)             Requested size: 188.22942pt x 167.87187pt.
  [9
 
@@ -1368,7 +1370,7 @@ n input line 245.
 File: img/RFN_neu/aufhaengung_zeichnungen.pdf Graphic file (type pdf)
 <use img/RFN_neu/aufhaengung_zeichnungen.pdf, page 4>
 Package pdftex.def Info: img/RFN_neu/aufhaengung_zeichnungen.pdf , page4 used o
-n input line 265.
+n input line 308.
 (pdftex.def)             Requested size: 209.86095pt x 167.8671pt.
  [10
 
@@ -1377,7 +1379,7 @@ n input line 265.
 ]
 File: img/JLU_Giessen-Logo.pdf Graphic file (type pdf)
 <use img/JLU_Giessen-Logo.pdf>
-Package pdftex.def Info: img/JLU_Giessen-Logo.pdf  used on input line 294.
+Package pdftex.def Info: img/JLU_Giessen-Logo.pdf  used on input line 337.
 (pdftex.def)             Requested size: 78.58356pt x 28.45274pt.
  [12
 
@@ -1400,13 +1402,13 @@ Package rerunfilecheck Info: File `rfn_neu_bilder.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31937 strings out of 467509
- 694860 string characters out of 5410238
- 1045760 words of memory out of 5000000
- 60548 multiletter control sequences out of 15000+600000
+ 32009 strings out of 467509
+ 696184 string characters out of 5410238
+ 1050612 words of memory out of 5000000
+ 60620 multiletter control sequences out of 15000+600000
  682845 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,13n,123p,1883b,1132s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,13n,123p,1883b,1166s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><
 C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/
 Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Use
@@ -1414,7 +1416,7 @@ rs/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/k
 w/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/kw/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/kw/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on rfn_neu_bilder.pdf (12 pages, 2224148 bytes).
+Output written on rfn_neu_bilder.pdf (12 pages, 2226560 bytes).
 PDF statistics:
  157 PDF objects out of 1000 (max. 8388607)
  25 named destinations out of 1000 (max. 500000)

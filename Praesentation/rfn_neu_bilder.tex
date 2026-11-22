@@ -68,6 +68,44 @@
      \end{tikzpicture}}%
 }
 
+% ── Bildanmerkungen ────────────────────────────────────────────────────────
+% Pfeile und Beschriftungen als Vektorgrafik ueber einem Bild.
+% Alle Koordinaten sind Anteile der Bildflaeche:
+%   (0,0) = untere linke Ecke, (1,1) = obere rechte Ecke des Bildes.
+% Dadurch bleiben die Anmerkungen beim Skalieren an ihrem Platz.
+% Achtung: Die Koordinaten gelten nur fuer genau dieses Bild. Wird ein Bild
+% ausgetauscht, muessen seine Anmerkungen neu gesetzt werden.
+\newcounter{anmnr}
+\tikzset{
+  anmerkungtext/.style={font=\scriptsize, color=giessenblau, inner sep=1.4pt,
+                        fill=white, fill opacity=0.82, text opacity=1,
+                        rounded corners=1pt, align=left},
+  anmerkungpfeil/.style={giessenblau, line width=0.45pt,
+                         -{Stealth[length=3.2pt,width=2.4pt]}},
+}
+
+% #1 Dateiname (ohne Pfad), #2 Hoehe, #3 Anmerkungen (\anmerkung-Aufrufe)
+\newlength{\anmbildbreite}
+\newcommand{\bildanmerkung}[3]{%
+  \setlength{\anmbildbreite}{\linewidth}%
+  \begin{tikzpicture}
+    \node[inner sep=0pt, anchor=south west] (bild) at (0,0)
+      {\includegraphics[height=#2,width=\anmbildbreite,keepaspectratio]{img/RFN_neu/#1}};
+    \begin{scope}[shift={(bild.south west)},
+                  x={($(bild.south east)-(bild.south west)$)},
+                  y={($(bild.north west)-(bild.south west)$)}]
+      #3
+    \end{scope}
+  \end{tikzpicture}%
+}
+
+% #1 Ort der Beschriftung, #2 Ankerseite, #3 Ziel des Pfeils, #4 Text
+\newcommand{\anmerkung}[4]{%
+  \stepcounter{anmnr}%
+  \node[anmerkungtext, anchor=#2] (anm\theanmnr) at #1 {#4};
+  \draw[anmerkungpfeil] (anm\theanmnr) -- #3;
+}
+
 % ── Meta ───────────────────────────────────────────────────────────────────
 \newcommand{\vortragsdatum}{\today}
 \title{Aufbau des neuen HF-Neutralisators}
@@ -127,7 +165,12 @@
   \begin{columns}[c]
     \begin{column}{\bildspalte}
       \centering
-      \rfnbild{02_spule_spulenstaebe.png}{5.9cm}{Halbschnitt durch Spule und Spulenstäbe}
+      \bildanmerkung{02_spule_spulenstaebe.png}{5.9cm}{%
+        \anmerkung{(0.02,0.68)}{west}{(0.17,0.52)}{Spule}
+        \anmerkung{(0.30,0.96)}{south}{(0.33,0.56)}{Spulenstäbe}
+        \anmerkung{(0.80,0.95)}{south}{(0.66,0.72)}{Glasgefäß}
+        \anmerkung{(0.02,0.08)}{west}{(0.15,0.27)}{GFK-Ring}
+      }
     \end{column}
     \begin{column}{\textspalte}
       \begin{itemize}
