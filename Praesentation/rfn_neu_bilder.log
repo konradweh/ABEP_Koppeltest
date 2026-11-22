@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.26)  22 NOV 2026 15:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.26)  22 NOV 2026 16:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1303,14 +1303,90 @@ Package pdftex.def Info: img/RFN_neu/05_blendenschraube.png  used on input line
  [7
 
  <./img/RFN_neu/05_blendenschraube.png (PNG copy)>]
-[8
+<img/halterung.png, id=64, 916.92563pt x 816.80156pt>
+File: img/halterung.png Graphic file (type png)
+<use img/halterung.png>
+Package pdftex.def Info: img/halterung.png  used on input line 227.
+(pdftex.def)             Requested size: 185.24269pt x 165.01505pt.
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+227.
+
+(C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
+File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
+27.
+
+(C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+227.
+
+(C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+227.
+
+(C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 227.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 227.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 227.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 227
+.
+
+(C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 227
+.
+
+(C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 227.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 227.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 227.
+ [8
+
+{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc} <.
+/img/halterung.png>]
+<img/RFN_neu/aufhaengung_zeichnungen.pdf, id=73, page=2, 1195.0156pt x 845.0468
+6pt>
+File: img/RFN_neu/aufhaengung_zeichnungen.pdf Graphic file (type pdf)
+<use img/RFN_neu/aufhaengung_zeichnungen.pdf, page 2>
+Package pdftex.def Info: img/RFN_neu/aufhaengung_zeichnungen.pdf , page2 used o
+n input line 249.
+(pdftex.def)             Requested size: 188.22942pt x 167.87108pt.
+ [9
+
+ <./img/RFN_neu/aufhaengung_zeichnungen.pdf>]
+<img/RFN_neu/aufhaengung_zeichnungen.pdf, id=87, page=4, 1195.0156pt x 845.0468
+6pt>
+File: img/RFN_neu/aufhaengung_zeichnungen.pdf Graphic file (type pdf)
+<use img/RFN_neu/aufhaengung_zeichnungen.pdf, page 4>
+Package pdftex.def Info: img/RFN_neu/aufhaengung_zeichnungen.pdf , page4 used o
+n input line 270.
+(pdftex.def)             Requested size: 199.18967pt x 159.3356pt.
+ [10
+
+ <./img/RFN_neu/aufhaengung_zeichnungen.pdf>] [11
 
 ]
 File: img/JLU_Giessen-Logo.pdf Graphic file (type pdf)
 <use img/JLU_Giessen-Logo.pdf>
-Package pdftex.def Info: img/JLU_Giessen-Logo.pdf  used on input line 231.
+Package pdftex.def Info: img/JLU_Giessen-Logo.pdf  used on input line 299.
 (pdftex.def)             Requested size: 78.58356pt x 28.45274pt.
- [9
+ [12
 
 ]
 \tf@nav=\write6
@@ -1331,21 +1407,22 @@ Package rerunfilecheck Info: File `rfn_neu_bilder.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31778 strings out of 467509
- 691358 string characters out of 5410238
- 1046744 words of memory out of 5000000
- 60432 multiletter control sequences out of 15000+600000
- 660055 words of font info for 55 fonts, out of 8000000 for 9000
+ 31933 strings out of 467509
+ 694814 string characters out of 5410238
+ 1046746 words of memory out of 5000000
+ 60545 multiletter control sequences out of 15000+600000
+ 680074 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,13n,123p,1883b,1133s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><
-C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/
-Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/User
-s/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/kw
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on rfn_neu_bilder.pdf (9 pages, 2037956 bytes).
+<C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><
+C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/
+Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Use
+rs/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/k
+w/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/kw/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb>
+Output written on rfn_neu_bilder.pdf (12 pages, 2216328 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 151 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 100 words of extra memory for PDF output out of 10000 (max. 10000000)
 
