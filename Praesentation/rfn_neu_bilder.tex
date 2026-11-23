@@ -69,30 +69,6 @@
      \end{tikzpicture}}%
 }
 
-% ── Bildanmerkungen ────────────────────────────────────────────────────────
-% Pfeile und Beschriftungen als Vektorgrafik ueber einem Bild.
-% Alle Koordinaten sind Anteile der Bildflaeche:
-%   (0,0) = untere linke Ecke, (1,1) = obere rechte Ecke des Bildes.
-% Dadurch bleiben die Anmerkungen beim Skalieren an ihrem Platz.
-% Achtung: Die Koordinaten gelten nur fuer genau dieses Bild. Wird ein Bild
-% ausgetauscht, muessen seine Anmerkungen neu gesetzt werden.
-%
-% Koordinaten ablesen:
-%   python tools/bildraster.py img/RFN_neu/01_gesamtschnitt.png
-% legt das Raster sichtbar ueber das Bild (raster_01_gesamtschnitt.png).
-% Fuer enge Stellen ein Ausschnitt, Reihenfolge x-links y-unten x-rechts y-oben:
-%   python tools/bildraster.py img/RFN_neu/06_blende_detail.png 0.1 0.0 0.5 0.4
-%
-% Aufruf:  \anmerkung{Ort des Labels}{Ankerseite}{Ziel des Pfeils}{Text}
-%   Ort       wo das Label steht. Werte < 0 oder > 1 legen es neben das Bild.
-%   Ankerseite welche Seite des Labels am Ort klebt: east west north south.
-%              east = Label steht links vom Ort, west = rechts davon.
-%   Ziel      wohin die Pfeilspitze zeigt.
-% Beispiel:  \anmerkung{(-0.15,0.52)}{east}{(0.204,0.222)}{Spule}
-%
-% Pfad einzeichnen (Stil pfad, rot):
-%   \draw[pfad] (x1,y1) -- (x2,y2) -- (x3,y3);
-% Mehrere sich ueberlappende Zuege ergeben mehrere Pfeilspitzen.
 \newcounter{anmnr}
 \tikzset{
   anmerkungtext/.style={font=\scriptsize, color=giessenblau, inner sep=1.4pt,
@@ -253,7 +229,9 @@
   \begin{columns}[c]
     \begin{column}{\bildspalte}
       \centering
-      \rfnbild{04_kontaktbolzen.png}{5.6cm}{Detail Kontaktbolzen in der Keramikhülse}
+      \hspace*{-0.8cm}
+      \vspace*{-1cm}
+      \includegraphics[height=6.5cm]{img/RFN_neu/04_Kontaktbolzen.pdf}
     \end{column}
     \begin{column}{\textspalte}
       \begin{itemize}
@@ -273,24 +251,17 @@
   \begin{columns}[c]
     \begin{column}{\bildspalte}
       \centering
-      \bildanmerkung{06_blende_detail.png}{5.6cm}{%
-        % Entlueftung: zwischen Klemmring und Blende nach links, dann nach unten
-        \draw[pfad] (0.620,0.158) -- (0.400,0.158);
-        \draw[pfad] (0.470,0.158) -- (0.175,0.158) -- (0.162,0.030);
-        \node[pfadtext, anchor=north] at (0.162,-0.03) {Entlüftung};
-        \anmerkung{(0.60,0.80)}{west}{(0.300,0.500)}{Blendenschraube}
-        \anmerkung{(0.02,0.72)}{west}{(0.100,0.450)}{PEEK-Hülse}
-        \anmerkung{(0.52,0.37)}{west}{(0.500,0.222)}{Glimmerscheibe}
-        \anmerkung{(0.80,0.30)}{west}{(0.720,0.187)}{Blende}
-        \anmerkung{(0.80,0.05)}{west}{(0.820,0.100)}{Klemmring}
-      }
+      \hspace*{-0.8cm}
+      \vspace*{-1cm}
+      \includegraphics[height=6.5cm]{img/RFN_neu/06_Blende.pdf}
     \end{column}
     \begin{column}{\textspalte}
+      \vspace*{0.8cm}
       \begin{itemize}
         \item Blende von unten wechselbar, angedrückt durch Klemmring
-        \item Schraube auf Blendenpotential, PEEK-Hülse isoliert sie vom Unterring
-        \item Fester Presskontakt zur Gasabdichtung zwischen Blende und Unterring
-        \item Glimmerscheibe isoliert Blende und Unterring; billig und temperaturbeständig
+        \item Schraube: Blendenpotential, PEEK-Hülse --> Unterring isoliert
+        \item Angepresst --> Gasabdichtung Blende -- Unterring
+        \item Glimmerscheibe für Isolation; billig und temperaturbeständig
       \end{itemize}
     \end{column}
   \end{columns}
