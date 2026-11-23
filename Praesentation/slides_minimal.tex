@@ -124,6 +124,37 @@
   \vfill
 \end{frame}
 
+
+% ============================================================
+\begin{frame}{Druckvariation: $f_{\mathrm{opt}} = 8{,}0 \to 17{,}2 \to 32{,}7$\,MHz}
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/abb18_druck_pohm}
+
+  \vspace{0.5em}
+  {\footnotesize\color{black!60}%
+  $\nu_m \propto p$, $n_e$ und $T_e$ fest, neues Design. Bei 0,02\,mbar grobe Stützstellen.\par}
+\end{frame}
+
+% ============================================================
+\begin{frame}{$f_{\mathrm{opt}} \propto p$: Verhältnis 4,06 bei Druckverhältnis 4}
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/abb19_fopt_druck}
+
+  \vspace{0.5em}
+  {\footnotesize\color{black!60}%
+  Optima bei 0,01 und 0,04\,mbar aus Parabel in $\ln f$. Formel an allen Punkten innerhalb von 4\,\%.\par}
+\end{frame}
+
+% ============================================================
+\begin{frame}{Festfrequenz: 13,56\,MHz bis etwa 0,02\,mbar, darüber 27,12\,MHz}
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/abb20_festfrequenz_druck}
+
+  \vspace{0.5em}
+  {\footnotesize\color{black!60}%
+  Gleichstand bei etwa 0,023\,mbar. Eigenresonanz und kapazitive Einkopplung nicht berücksichtigt.\par}
+\end{frame}
+
 % ============================================================
 \begin{frame}{$R_\mathrm{Plasma}$ sättigt, $R_\mathrm{Metall} \propto \omega^{0{,}463}$}
   \centering
@@ -131,9 +162,6 @@
 \end{frame}
 
 % ============================================================
-% Das Balkendiagramm ist flacher als die Kurvenbilder und fuellt die Folie
-% nicht von selbst. Ueber die Breite statt die Hoehe einpassen und mit
-% \vfill zentrieren, sonst haengt es oben und laesst unten eine Luecke.
 \begin{frame}{Verlustaufteilung bei 4\,MHz}
   \vfill
   \centering
@@ -182,27 +210,23 @@
 
 % ============================================================
 \begin{frame}{Offen}
-  \vfill
   \begin{itemize}
-    \item $h_\mathrm{anb} = 2000\ \mathrm{W/(m^2K)}$ angesetzt, nicht gemessen
+    \item $h_{\mathrm{anb}} = 2000\,\mathrm{W/(m^2K)}$ angesetzt, nicht gemessen
     \item $\sigma_p$ über die Leistungsleiter konstant, $n_e(P)$ fehlt
     \item Kapazitive Einkopplung nicht modelliert
-    \item Eichregularisierung im Vakuum: Test läuft, Teilleistungen nicht betroffen
+    \item Eichregularisierung: Optimum und Rangfolge unverändert, $P_{\mathrm{ohm}}$ bei 40,7\,MHz um bis zu 4\,\% unsicher
     \item Edelstahl-Reihe besteht die Schließprobe nicht
   \end{itemize}
-  \vfill
 \end{frame}
 
 % ============================================================
 \begin{frame}{Fragen}
-  \vfill
   \begin{itemize}
     \item Festfrequenzen der neuen RFGs?
-    \item Betriebsdruck? \ $f_\mathrm{opt} \propto p$
-    \item Gaszusammensetzung? Gerechnet N$_2$/O$_2$ $=$ 79/21
+    \item Betriebsdruck? $f_{\mathrm{opt}} \propto p$, Gleichstand 13,56 / 27,12\,MHz bei etwa 0,023\,mbar
+    \item Gaszusammensetzung? Gerechnet N$_2$/O$_2$ = 79/21
     \item Aluminium-Variante bauen?
   \end{itemize}
-  \vfill
 \end{frame}
 
 % ============================================================
@@ -216,8 +240,8 @@
     \draw[giessenblau, line width=0.8pt] ([yshift=1.6cm]current page.south west) -- ([yshift=1.6cm]current page.south east);
   \end{tikzpicture}
   \begin{center}
-    {\LARGE\bfseries\color{giessenblau} $f_\mathrm{opt} \approx 15\,$MHz}\\[0.8em]
-    {\Large\color{grauton} von den Festfrequenzen also 13,56\,MHz}
+    {\LARGE\bfseries\color{giessenblau} $f_{\mathrm{opt}} \approx 15$\,MHz bei 0,02\,mbar}\\[0.8em]
+    {\Large\color{grauton} von den Festfrequenzen also 13,56\,MHz, bei 0,04\,mbar 27,12\,MHz}
   \end{center}
 \end{frame}
 }

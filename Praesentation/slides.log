@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.26)  11 NOV 2026 11:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.26)  18 NOV 2026 19:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1420,11 +1420,11 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
 ] [15
 
 ]
-<img/abb03_spulenstrom.pdf, id=119, 532.26859pt x 323.16719pt>
+<img/abb03_spulenstrom.pdf, id=119, 573.82379pt x 338.4242pt>
 File: img/abb03_spulenstrom.pdf Graphic file (type pdf)
 <use img/abb03_spulenstrom.pdf>
 Package pdftex.def Info: img/abb03_spulenstrom.pdf  used on input line 395.
-(pdftex.def)             Requested size: 159.333pt x 96.73886pt.
+(pdftex.def)             Requested size: 159.333pt x 93.96805pt.
 
 Overfull \vbox (49.60728pt too high) detected at line 395
  []
@@ -1433,19 +1433,19 @@ Overfull \vbox (49.60728pt too high) detected at line 395
 
 {C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <.
 /img/abb03_spulenstrom.pdf>]
-<img/abb01_kopplungsgrad.pdf, id=182, 616.53775pt x 323.16719pt>
+<img/abb01_kopplungsgrad.pdf, id=187, 684.79276pt x 339.42795pt>
 File: img/abb01_kopplungsgrad.pdf Graphic file (type pdf)
 <use img/abb01_kopplungsgrad.pdf>
 Package pdftex.def Info: img/abb01_kopplungsgrad.pdf  used on input line 424.
-(pdftex.def)             Requested size: 199.1693pt x 104.3969pt.
+(pdftex.def)             Requested size: 199.1693pt x 98.72162pt.
  [17
 
  <./img/abb01_kopplungsgrad.pdf>]
-<img/abb02_restverlust.pdf, id=251, 530.76295pt x 342.74031pt>
+<img/abb02_restverlust.pdf, id=263, 573.82379pt x 359.00107pt>
 File: img/abb02_restverlust.pdf Graphic file (type pdf)
 <use img/abb02_restverlust.pdf>
 Package pdftex.def Info: img/abb02_restverlust.pdf  used on input line 451.
-(pdftex.def)             Requested size: 207.13776pt x 133.75708pt.
+(pdftex.def)             Requested size: 207.13776pt x 129.59087pt.
 
 Overfull \vbox (5.57516pt too high) detected at line 451
  []
@@ -1469,15 +1469,15 @@ Overfull \vbox (3.74397pt too high) detected at line 478
 [19
 
 ]
-<img/abb13_widerstaende.pdf, id=325, 540.54951pt x 323.16719pt>
+<img/abb13_widerstaende.pdf, id=351, 573.82379pt x 354.91379pt>
 File: img/abb13_widerstaende.pdf Graphic file (type pdf)
 <use img/abb13_widerstaende.pdf>
 Package pdftex.def Info: img/abb13_widerstaende.pdf  used on input line 502.
-(pdftex.def)             Requested size: 215.10016pt x 128.59395pt.
+(pdftex.def)             Requested size: 215.10016pt x 133.03818pt.
  [20
 
  <./img/abb13_widerstaende.pdf>]
-<img/abb_C_fopt_datensaetze.pdf, id=384, 958.1396pt x 418.97327pt>
+<img/abb_C_fopt_datensaetze.pdf, id=424, 958.1396pt x 418.97327pt>
 File: img/abb_C_fopt_datensaetze.pdf Graphic file (type pdf)
 <use img/abb_C_fopt_datensaetze.pdf>
 Package pdftex.def Info: img/abb_C_fopt_datensaetze.pdf  used on input line 520
@@ -1490,7 +1490,7 @@ Overfull \vbox (2.13432pt too high) detected at line 520
 [21
 
  <./img/abb_C_fopt_datensaetze.pdf>]
-<img/abb_B_optimum_kurve.pdf, id=468, 951.61522pt x 389.67984pt>
+<img/abb_B_optimum_kurve.pdf, id=519, 951.61522pt x 389.67984pt>
 File: img/abb_B_optimum_kurve.pdf Graphic file (type pdf)
 <use img/abb_B_optimum_kurve.pdf>
 Package pdftex.def Info: img/abb_B_optimum_kurve.pdf  used on input line 535.
@@ -1498,21 +1498,21 @@ Package pdftex.def Info: img/abb_B_optimum_kurve.pdf  used on input line 535.
  [22
 
  <./img/abb_B_optimum_kurve.pdf>]
-<img/abb05_verlustaufteilung.pdf, id=558, 654.28694pt x 258.66376pt>
+<img/abb05_verlustaufteilung.pdf, id=616, 654.28694pt x 267.34839pt>
 File: img/abb05_verlustaufteilung.pdf Graphic file (type pdf)
 <use img/abb05_verlustaufteilung.pdf>
 Package pdftex.def Info: img/abb05_verlustaufteilung.pdf  used on input line 55
 7.
-(pdftex.def)             Requested size: 207.13776pt x 81.88603pt.
+(pdftex.def)             Requested size: 207.13776pt x 84.63536pt.
 
 [23
 
  <./img/abb05_verlustaufteilung.pdf>]
-<img/abb06_temperaturen.pdf, id=618, 574.64479pt x 342.95679pt>
+<img/abb06_temperaturen.pdf, id=688, 578.99852pt x 399.92474pt>
 File: img/abb06_temperaturen.pdf Graphic file (type pdf)
 <use img/abb06_temperaturen.pdf>
 Package pdftex.def Info: img/abb06_temperaturen.pdf  used on input line 589.
-(pdftex.def)             Requested size: 199.1693pt x 118.86446pt.
+(pdftex.def)             Requested size: 199.1693pt x 137.57143pt.
 
 Overfull \vbox (7.71234pt too high) detected at line 589
  []
@@ -1520,38 +1520,38 @@ Overfull \vbox (7.71234pt too high) detected at line 589
 [24
 
  <./img/abb06_temperaturen.pdf>]
-<img/abb10_temperatur_ueber_frequenz.pdf, id=683, 537.28732pt x 342.74031pt>
+<img/abb10_temperatur_ueber_frequenz.pdf, id=775, 573.82379pt x 376.69518pt>
 File: img/abb10_temperatur_ueber_frequenz.pdf Graphic file (type pdf)
 <use img/abb10_temperatur_ueber_frequenz.pdf>
 Package pdftex.def Info: img/abb10_temperatur_ueber_frequenz.pdf  used on input
  line 616.
-(pdftex.def)             Requested size: 215.10016pt x 137.21397pt.
+(pdftex.def)             Requested size: 215.10016pt x 141.20285pt.
  [25
 
  <./img/abb10_temperatur_ueber_frequenz.pdf>]
-<img/abb14_betriebskarte.pdf, id=749, 654.24423pt x 328.18594pt>
+<img/abb14_betriebskarte.pdf, id=856, 654.24423pt x 357.12204pt>
 File: img/abb14_betriebskarte.pdf Graphic file (type pdf)
 <use img/abb14_betriebskarte.pdf>
 Package pdftex.def Info: img/abb14_betriebskarte.pdf  used on input line 640.
-(pdftex.def)             Requested size: 223.06863pt x 111.89722pt.
+(pdftex.def)             Requested size: 223.06863pt x 121.76318pt.
  [26
 
  <./img/abb14_betriebskarte.pdf>]
-<img/abb15_regelung_plasmaleistung.pdf, id=811, 574.98817pt x 323.16719pt>
+<img/abb15_regelung_plasmaleistung.pdf, id=939, 610.01901pt x 357.12204pt>
 File: img/abb15_regelung_plasmaleistung.pdf Graphic file (type pdf)
 <use img/abb15_regelung_plasmaleistung.pdf>
 Package pdftex.def Info: img/abb15_regelung_plasmaleistung.pdf  used on input l
 ine 664.
-(pdftex.def)             Requested size: 215.10016pt x 120.89153pt.
+(pdftex.def)             Requested size: 215.10016pt x 125.92094pt.
  [27
 
  <./img/abb15_regelung_plasmaleistung.pdf>]
-<img/abb09_spulenwiderstand.pdf, id=866, 540.54951pt x 325.42563pt>
+<img/abb09_spulenwiderstand.pdf, id=1015, 573.82379pt x 357.17223pt>
 File: img/abb09_spulenwiderstand.pdf Graphic file (type pdf)
 <use img/abb09_spulenwiderstand.pdf>
 Package pdftex.def Info: img/abb09_spulenwiderstand.pdf  used on input line 702
 .
-(pdftex.def)             Requested size: 159.333pt x 95.92027pt.
+(pdftex.def)             Requested size: 159.333pt x 99.17368pt.
  [28
 
  <./img/abb09_spulenwiderstand.pdf>] [29
@@ -1616,9 +1616,9 @@ nts/type1/public/lm/lmsso9.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts
 pe1/public/lm/lmsy6.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/lm/lmsy8.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/lm/lmsy9.pfb>
-Output written on slides.pdf (33 pages, 2407629 bytes).
+Output written on slides.pdf (33 pages, 2471460 bytes).
 PDF statistics:
- 1067 PDF objects out of 1200 (max. 8388607)
+ 1233 PDF objects out of 1440 (max. 8388607)
  67 named destinations out of 1000 (max. 500000)
  143 words of extra memory for PDF output out of 10000 (max. 10000000)
 

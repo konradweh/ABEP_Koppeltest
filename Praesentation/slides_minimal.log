@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.26)  11 NOV 2026 11:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.26)  19 NOV 2026 15:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -931,11 +931,11 @@ File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2
 
 {C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
-<img/abb01_kopplungsgrad.pdf, id=40, 616.53775pt x 323.16719pt>
+<img/abb01_kopplungsgrad.pdf, id=40, 684.79276pt x 339.42795pt>
 File: img/abb01_kopplungsgrad.pdf Graphic file (type pdf)
 <use img/abb01_kopplungsgrad.pdf>
 Package pdftex.def Info: img/abb01_kopplungsgrad.pdf  used on input line 103.
-(pdftex.def)             Requested size: 347.41312pt x 182.09746pt.
+(pdftex.def)             Requested size: 367.37929pt x 182.09746pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 103.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -951,79 +951,115 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
  [3
 
  <./img/abb01_kopplungsgrad.pdf>]
-<img/abb02_restverlust.pdf, id=111, 530.76295pt x 342.74031pt>
+<img/abb02_restverlust.pdf, id=118, 573.82379pt x 359.00107pt>
 File: img/abb02_restverlust.pdf Graphic file (type pdf)
 <use img/abb02_restverlust.pdf>
 Package pdftex.def Info: img/abb02_restverlust.pdf  used on input line 109.
-(pdftex.def)             Requested size: 281.99142pt x 182.09746pt.
+(pdftex.def)             Requested size: 291.06145pt x 182.09746pt.
  [4
 
  <./img/abb02_restverlust.pdf>] [5
 
 ]
-<img/abb13_widerstaende.pdf, id=180, 540.54951pt x 323.16719pt>
+<img/abb18_druck_pohm.pdf, id=201, 306.00824pt x 182.84511pt>
+File: img/abb18_druck_pohm.pdf Graphic file (type pdf)
+<use img/abb18_druck_pohm.pdf>
+Package pdftex.def Info: img/abb18_druck_pohm.pdf  used on input line 136.
+(pdftex.def)             Requested size: 318.67209pt x 190.41388pt.
+
+Overfull \vbox (17.2082pt too high) detected at line 136
+ []
+
+[6
+
+ <./img/abb18_druck_pohm.pdf>]
+<img/abb19_fopt_druck.pdf, id=248, 307.3884pt x 184.35074pt>
+File: img/abb19_fopt_druck.pdf Graphic file (type pdf)
+<use img/abb19_fopt_druck.pdf>
+Package pdftex.def Info: img/abb19_fopt_druck.pdf  used on input line 146.
+(pdftex.def)             Requested size: 318.67209pt x 191.12389pt.
+
+Overfull \vbox (17.91815pt too high) detected at line 146
+ []
+
+[7
+
+ <./img/abb19_fopt_druck.pdf>]
+<img/abb20_festfrequenz_druck.pdf, id=309, 306.00824pt x 182.84511pt>
+File: img/abb20_festfrequenz_druck.pdf Graphic file (type pdf)
+<use img/abb20_festfrequenz_druck.pdf>
+Package pdftex.def Info: img/abb20_festfrequenz_druck.pdf  used on input line 156.
+(pdftex.def)             Requested size: 318.67209pt x 190.41388pt.
+
+Overfull \vbox (17.2082pt too high) detected at line 156
+ []
+
+[8
+
+ <./img/abb20_festfrequenz_druck.pdf>]
+<img/abb13_widerstaende.pdf, id=369, 573.82379pt x 354.91379pt>
 File: img/abb13_widerstaende.pdf Graphic file (type pdf)
 <use img/abb13_widerstaende.pdf>
-Package pdftex.def Info: img/abb13_widerstaende.pdf  used on input line 131.
-(pdftex.def)             Requested size: 304.59448pt x 182.09746pt.
- [6
-
- <./img/abb13_widerstaende.pdf>]
-<img/abb05_verlustaufteilung.pdf, id=239, 654.28694pt x 258.66376pt>
-File: img/abb05_verlustaufteilung.pdf Graphic file (type pdf)
-<use img/abb05_verlustaufteilung.pdf>
-Package pdftex.def Info: img/abb05_verlustaufteilung.pdf  used on input line 145.
-(pdftex.def)             Requested size: 398.3386pt x 157.47679pt.
- [7
-
- <./img/abb05_verlustaufteilung.pdf>]
-<img/abb06_temperaturen.pdf, id=300, 574.64479pt x 342.95679pt>
-File: img/abb06_temperaturen.pdf Graphic file (type pdf)
-<use img/abb06_temperaturen.pdf>
-Package pdftex.def Info: img/abb06_temperaturen.pdf  used on input line 151.
-(pdftex.def)             Requested size: 305.11269pt x 182.09746pt.
- [8
-
- <./img/abb06_temperaturen.pdf>]
-<img/abb10_temperatur_ueber_frequenz.pdf, id=365, 537.28732pt x 342.74031pt>
-File: img/abb10_temperatur_ueber_frequenz.pdf Graphic file (type pdf)
-<use img/abb10_temperatur_ueber_frequenz.pdf>
-Package pdftex.def Info: img/abb10_temperatur_ueber_frequenz.pdf  used on input line 157.
-(pdftex.def)             Requested size: 285.45778pt x 182.09746pt.
+Package pdftex.def Info: img/abb13_widerstaende.pdf  used on input line 162.
+(pdftex.def)             Requested size: 294.41493pt x 182.09746pt.
  [9
 
- <./img/abb10_temperatur_ueber_frequenz.pdf>]
-<img/abb14_betriebskarte.pdf, id=431, 654.24423pt x 328.18594pt>
-File: img/abb14_betriebskarte.pdf Graphic file (type pdf)
-<use img/abb14_betriebskarte.pdf>
-Package pdftex.def Info: img/abb14_betriebskarte.pdf  used on input line 163.
-(pdftex.def)             Requested size: 363.01999pt x 182.09746pt.
+ <./img/abb13_widerstaende.pdf>]
+<img/abb05_verlustaufteilung.pdf, id=441, 654.28694pt x 267.34839pt>
+File: img/abb05_verlustaufteilung.pdf Graphic file (type pdf)
+<use img/abb05_verlustaufteilung.pdf>
+Package pdftex.def Info: img/abb05_verlustaufteilung.pdf  used on input line 173.
+(pdftex.def)             Requested size: 398.3386pt x 162.76407pt.
  [10
 
- <./img/abb14_betriebskarte.pdf>]
-<img/abb15_regelung_plasmaleistung.pdf, id=493, 574.98817pt x 323.16719pt>
-File: img/abb15_regelung_plasmaleistung.pdf Graphic file (type pdf)
-<use img/abb15_regelung_plasmaleistung.pdf>
-Package pdftex.def Info: img/abb15_regelung_plasmaleistung.pdf  used on input line 169.
-(pdftex.def)             Requested size: 324.00032pt x 182.09746pt.
+ <./img/abb05_verlustaufteilung.pdf>]
+<img/abb06_temperaturen.pdf, id=513, 578.99852pt x 399.92474pt>
+File: img/abb06_temperaturen.pdf Graphic file (type pdf)
+<use img/abb06_temperaturen.pdf>
+Package pdftex.def Info: img/abb06_temperaturen.pdf  used on input line 179.
+(pdftex.def)             Requested size: 263.63026pt x 182.09746pt.
  [11
 
- <./img/abb15_regelung_plasmaleistung.pdf>] [12
+ <./img/abb06_temperaturen.pdf>]
+<img/abb10_temperatur_ueber_frequenz.pdf, id=600, 573.82379pt x 376.69518pt>
+File: img/abb10_temperatur_ueber_frequenz.pdf Graphic file (type pdf)
+<use img/abb10_temperatur_ueber_frequenz.pdf>
+Package pdftex.def Info: img/abb10_temperatur_ueber_frequenz.pdf  used on input line 185.
+(pdftex.def)             Requested size: 277.3936pt x 182.09746pt.
+ [12
 
-] [13
+ <./img/abb10_temperatur_ueber_frequenz.pdf>]
+<img/abb14_betriebskarte.pdf, id=680, 654.24423pt x 357.12204pt>
+File: img/abb14_betriebskarte.pdf Graphic file (type pdf)
+<use img/abb14_betriebskarte.pdf>
+Package pdftex.def Info: img/abb14_betriebskarte.pdf  used on input line 191.
+(pdftex.def)             Requested size: 333.61023pt x 182.09746pt.
+ [13
 
-] [14
+ <./img/abb14_betriebskarte.pdf>]
+<img/abb15_regelung_plasmaleistung.pdf, id=764, 610.01901pt x 357.12204pt>
+File: img/abb15_regelung_plasmaleistung.pdf Graphic file (type pdf)
+<use img/abb15_regelung_plasmaleistung.pdf>
+Package pdftex.def Info: img/abb15_regelung_plasmaleistung.pdf  used on input line 197.
+(pdftex.def)             Requested size: 311.05904pt x 182.09746pt.
+ [14
+
+ <./img/abb15_regelung_plasmaleistung.pdf>] [15
+
+] [16
+
+] [17
 
 ]
 File: img/JLU_Giessen-Logo.pdf Graphic file (type pdf)
 <use img/JLU_Giessen-Logo.pdf>
-Package pdftex.def Info: img/JLU_Giessen-Logo.pdf  used on input line 222.
+Package pdftex.def Info: img/JLU_Giessen-Logo.pdf  used on input line 246.
 (pdftex.def)             Requested size: 78.58356pt x 28.45274pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 222.
+(Font)              <17.28> on input line 246.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 222.
- [15
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 246.
+ [18
 
 ]
 \tf@nav=\write6
@@ -1044,17 +1080,17 @@ Package rerunfilecheck Info: File `slides_minimal.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27093 strings out of 467509
- 544352 string characters out of 5410238
+ 27133 strings out of 467509
+ 545420 string characters out of 5410238
  922610 words of memory out of 5000000
- 55711 multiletter control sequences out of 15000+600000
+ 55745 multiletter control sequences out of 15000+600000
  729853 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,13n,123p,1933b,725s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso17.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso8.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on slides_minimal.pdf (15 pages, 528546 bytes).
+Output written on slides_minimal.pdf (18 pages, 644926 bytes).
 PDF statistics:
- 679 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 975 PDF objects out of 1000 (max. 8388607)
+ 37 named destinations out of 1000 (max. 500000)
+ 103 words of extra memory for PDF output out of 10000 (max. 10000000)
 
