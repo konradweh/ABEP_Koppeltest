@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.26)  23 NOV 2026 18:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.26)  24 NOV 2026 18:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -945,72 +945,88 @@ File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 <img/RFN_neu/01_gesamtschnitt.png, id=33, 685.56125pt x 1037.8775pt>
 File: img/RFN_neu/01_gesamtschnitt.png Graphic file (type png)
 <use img/RFN_neu/01_gesamtschnitt.png>
-Package pdftex.def Info: img/RFN_neu/01_gesamtschnitt.png  used on input line 170.
-(pdftex.def)             Requested size: 112.75705pt x 170.70395pt.
- [3
+Package pdftex.def Info: img/RFN_neu/01_gesamtschnitt.png  used on input line 158.
+(pdftex.def)             Requested size: 145.6563pt x 220.50885pt.
+
+Overfull \vbox (27.66812pt too high) detected at line 158
+ []
+
+[3
 
  <./img/RFN_neu/01_gesamtschnitt.png (PNG copy)>]
-<img/RFN_neu/02_spule_spulenstaebe.png, id=39, 1765.59625pt x 1163.34625pt>
+<img/RFN_neu/02_spule_spulenstaebe.png, id=39, 1284.59924pt x 698.00775pt>
 File: img/RFN_neu/02_spule_spulenstaebe.png Graphic file (type png)
 <use img/RFN_neu/02_spule_spulenstaebe.png>
-Package pdftex.def Info: img/RFN_neu/02_spule_spulenstaebe.png  used on input line 194.
-(pdftex.def)             Requested size: 215.0953pt x 141.72566pt.
-LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 194.
- (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
+Package pdftex.def Info: img/RFN_neu/02_spule_spulenstaebe.png  used on input line 178.
+(pdftex.def)             Requested size: 288.00308pt x 156.49014pt.
+
+Overfull \hbox (43.82693pt too wide) in paragraph at lines 178--178
+ []|    [] 
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 178.
+(C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 194.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 178.
  (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 194.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 178.
  (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 194.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 178.
  (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 194.
+(Font)              <10> on input line 178.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 194.
+(Font)              <7> on input line 178.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 194.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 194.
+(Font)              <5> on input line 178.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 178.
  (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 194.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 178.
  (C:\Users\kw\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 194.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 178.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 194.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 178.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 194.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 178.
  [4
 
-{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./img/RFN_neu/02_spule_spulenstaebe.png (PNG copy)>]
-<img/RFN_neu/03_federschraube.png, id=46, 1304.875pt x 1163.34625pt>
-File: img/RFN_neu/03_federschraube.png Graphic file (type png)
-<use img/RFN_neu/03_federschraube.png>
-Package pdftex.def Info: img/RFN_neu/03_federschraube.png  used on input line 223.
-(pdftex.def)             Requested size: 178.71901pt x 159.33487pt.
- [5
+{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./img/RFN_neu/02_spule_spulenstaebe.png>]
 
- <./img/RFN_neu/03_federschraube.png (PNG copy)>]
+pdfTeX warning: pdflatex (file ./img/RFN_neu/03_Federregion.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/RFN_neu/03_Federregion.pdf, id=48, 752.8125pt x 501.875pt>
+File: img/RFN_neu/03_Federregion.pdf Graphic file (type pdf)
+<use img/RFN_neu/03_Federregion.pdf>
+Package pdftex.def Info: img/RFN_neu/03_Federregion.pdf  used on input line 203.
+(pdftex.def)             Requested size: 256.07921pt x 170.71652pt.
+
+Overfull \hbox (47.18376pt too wide) in paragraph at lines 203--203
+ []|    [] 
+ []
+
+[5
+
+ <./img/RFN_neu/03_Federregion.pdf>]
 
 pdfTeX warning: pdflatex (file ./img/RFN_neu/04_Kontaktbolzen.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/RFN_neu/04_Kontaktbolzen.pdf, id=52, 752.8125pt x 501.875pt>
+<img/RFN_neu/04_Kontaktbolzen.pdf, id=63, 752.8125pt x 501.875pt>
 File: img/RFN_neu/04_Kontaktbolzen.pdf Graphic file (type pdf)
 <use img/RFN_neu/04_Kontaktbolzen.pdf>
-Package pdftex.def Info: img/RFN_neu/04_Kontaktbolzen.pdf  used on input line 245.
+Package pdftex.def Info: img/RFN_neu/04_Kontaktbolzen.pdf  used on input line 223.
 (pdftex.def)             Requested size: 277.42203pt x 184.9429pt.
 
-Overfull \hbox (41.7818pt too wide) in paragraph at lines 245--245
+Overfull \hbox (44.62724pt too wide) in paragraph at lines 223--223
  []|    [] 
  []
 
@@ -1019,48 +1035,65 @@ Overfull \hbox (41.7818pt too wide) in paragraph at lines 245--245
  <./img/RFN_neu/04_Kontaktbolzen.pdf>]
 
 pdfTeX warning: pdflatex (file ./img/RFN_neu/06_Blende.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/RFN_neu/06_Blende.pdf, id=67, 736.89023pt x 517.68994pt>
+<img/RFN_neu/06_Blende.pdf, id=78, 659.87325pt x 516.71223pt>
 File: img/RFN_neu/06_Blende.pdf Graphic file (type pdf)
 <use img/RFN_neu/06_Blende.pdf>
-Package pdftex.def Info: img/RFN_neu/06_Blende.pdf  used on input line 268.
-(pdftex.def)             Requested size: 263.2451pt x 184.9429pt.
+Package pdftex.def Info: img/RFN_neu/06_Blende.pdf  used on input line 244.
+(pdftex.def)             Requested size: 236.18483pt x 184.9429pt.
 
-Overfull \hbox (27.60487pt too wide) in paragraph at lines 268--268
+Overfull \hbox (3.39005pt too wide) in paragraph at lines 244--244
  []|    [] 
  []
 
 [7
 
  <./img/RFN_neu/06_Blende.pdf>]
-<img/halterung.png, id=83, 916.92563pt x 816.80156pt>
-File: img/halterung.png Graphic file (type png)
-<use img/halterung.png>
-Package pdftex.def Info: img/halterung.png  used on input line 291.
-(pdftex.def)             Requested size: 188.44667pt x 167.86916pt.
- [8
+<img/RFN_neu/08_aufhaengung.png, id=94, 1436.36626pt x 900.36375pt>
+File: img/RFN_neu/08_aufhaengung.png Graphic file (type png)
+<use img/RFN_neu/08_aufhaengung.png>
+Package pdftex.def Info: img/RFN_neu/08_aufhaengung.png  used on input line 268.
+(pdftex.def)             Requested size: 249.6364pt x 156.49014pt.
 
-{C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc} <./img/halterung.png>]
-<img/RFN_neu/aufhaengung_zeichnungen.pdf, id=92, page=2, 1195.0156pt x 845.04686pt>
-File: img/RFN_neu/aufhaengung_zeichnungen.pdf Graphic file (type pdf)
-<use img/RFN_neu/aufhaengung_zeichnungen.pdf, page 2>
-Package pdftex.def Info: img/RFN_neu/aufhaengung_zeichnungen.pdf , page2 used on input line 312.
-(pdftex.def)             Requested size: 188.22942pt x 167.87187pt.
- [9
+Overfull \hbox (16.84161pt too wide) in paragraph at lines 268--268
+ []|    [] 
+ []
 
- <./img/RFN_neu/aufhaengung_zeichnungen.pdf>]
-<img/RFN_neu/aufhaengung_zeichnungen.pdf, id=106, page=4, 1195.0156pt x 845.04686pt>
-File: img/RFN_neu/aufhaengung_zeichnungen.pdf Graphic file (type pdf)
-<use img/RFN_neu/aufhaengung_zeichnungen.pdf, page 4>
-Package pdftex.def Info: img/RFN_neu/aufhaengung_zeichnungen.pdf , page4 used on input line 332.
-(pdftex.def)             Requested size: 209.86095pt x 167.8671pt.
- [10
+[8
 
- <./img/RFN_neu/aufhaengung_zeichnungen.pdf>] [11
+ <./img/RFN_neu/08_aufhaengung.png (PNG copy)>]
+<img/RFN_neu/09_drehbarkeit.png, id=100, 1387.1825pt x 922.44624pt>
+File: img/RFN_neu/09_drehbarkeit.png Graphic file (type png)
+<use img/RFN_neu/09_drehbarkeit.png>
+Package pdftex.def Info: img/RFN_neu/09_drehbarkeit.png  used on input line 288.
+(pdftex.def)             Requested size: 256.70941pt x 170.71652pt.
+
+Overfull \hbox (23.91463pt too wide) in paragraph at lines 288--288
+ []|    [] 
+ []
+
+[9
+
+ <./img/RFN_neu/09_drehbarkeit.png (PNG copy)>]
+
+pdfTeX warning: pdflatex (file ./img/RFN_neu/08_aufhaengung.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/RFN_neu/08_aufhaengung.pdf, id=106, 752.8125pt x 501.875pt>
+File: img/RFN_neu/08_aufhaengung.pdf Graphic file (type pdf)
+<use img/RFN_neu/08_aufhaengung.pdf>
+Package pdftex.def Info: img/RFN_neu/08_aufhaengung.pdf  used on input line 308.
+(pdftex.def)             Requested size: 277.42203pt x 184.9429pt.
+
+Overfull \hbox (44.62724pt too wide) in paragraph at lines 308--308
+ []|    [] 
+ []
+
+[10
+
+ <./img/RFN_neu/08_aufhaengung.pdf>] [11
 
 ]
 File: img/JLU_Giessen-Logo.pdf Graphic file (type pdf)
 <use img/JLU_Giessen-Logo.pdf>
-Package pdftex.def Info: img/JLU_Giessen-Logo.pdf  used on input line 361.
+Package pdftex.def Info: img/JLU_Giessen-Logo.pdf  used on input line 337.
 (pdftex.def)             Requested size: 78.58356pt x 28.45274pt.
  [12
 
@@ -1083,17 +1116,17 @@ Package rerunfilecheck Info: File `rfn_neu_bilder.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32137 strings out of 467509
- 698418 string characters out of 5410238
- 1053203 words of memory out of 5000000
- 60746 multiletter control sequences out of 15000+600000
+ 31958 strings out of 467509
+ 695411 string characters out of 5410238
+ 1048203 words of memory out of 5000000
+ 60568 multiletter control sequences out of 15000+600000
  682845 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,13n,123p,1933b,1166s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on rfn_neu_bilder.pdf (12 pages, 1321733 bytes).
+ 128i,13n,123p,1933b,1132s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/kw/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
+Output written on rfn_neu_bilder.pdf (12 pages, 2438346 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
+ 171 PDF objects out of 1000 (max. 8388607)
  25 named destinations out of 1000 (max. 500000)
- 100 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
